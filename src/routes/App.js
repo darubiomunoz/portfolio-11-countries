@@ -1,21 +1,24 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import '../styles/routes/App.css';
+import GlobalStyle from "../styles/GlobalStyles";
 
-import HomePage from '../pages/HomePage';
-import Country from '../pages/Country';
-import NotFound from '../pages/NotFound';
+import HomePage from "../pages/HomePage";
+import Country from "../pages/Country";
+import NotFound from "../pages/NotFound";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/country/id:" component={Country} />
-        <Route component={NotFound} />
-      </Switch>
+      <>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/country/id:" component={Country} />
+          <Route component={NotFound} />
+        </Switch>
+        <GlobalStyle />
+      </>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

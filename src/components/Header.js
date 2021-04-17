@@ -1,6 +1,12 @@
+import styled from 'styled-components';
+
+const Nav = styled.nav`
+background-color: red;
+`
+
 const Header = () => {
   return (
-    <nav>
+    <Nav>
       <ul>
         <li>
           <h1>Where in the world?</h1>
@@ -12,7 +18,7 @@ const Header = () => {
           </button>
         </li>
       </ul>
-    </nav>
+    </Nav>
   );
 }
 
