@@ -2,13 +2,13 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
-Project Link: [https://darubiomunoz.github.io/portfolio-10-joblistingwithfiltering](https://darubiomunoz.github.io/portfolio-10-joblistingwithfiltering)
+Project Link: [https://darubiomunoz.github.io/portfolio-11-countries](https://darubiomunoz.github.io/portfolio-11-countries)
 <br />
 <p align="center">
-  <a href="https://darubiomunoz.github.io/portfolio-10-joblistingwithfiltering">
+  <a href="https://darubiomunoz.github.io/portfolio-11-countries">
     <img src="./src/assets/images/readme-logo.svg" alt="Logo" width="200" height="200">
   </a>
-  <h1 align="center">Job Listing</h1>
+  <h1 align="center">Countries</h1>
   <p align="center">
     ReactJS
     <br />
@@ -51,22 +51,27 @@ Project Link: [https://darubiomunoz.github.io/portfolio-10-joblistingwithfilteri
 ![Product Name Screen Shot][product-screenshot-frontend]
 ![Product Name Screen Shot][product-screenshot-mobile]
 
-As I write this README file, I'm starting this project and I'm very excited because It's the first time I'm applying Redux to one of my personal projects :stars:
+This project is all about consuming an ***API of countries*** and their particular information that I'll display in two pages. Also I have to be able to search for any specific country and filter them by different categories.
 
-I believe it's going to be difficult at first but I'm sure I can find a way to make it until the end of the project successfully with the help of my usual strategy search-read-ask :smile:
+In terms of challenges that I'm trying to overcome in this project are implementing hooks I haven't implemented before in other projects, that's because I just finished a course on ***React Hooks*** specifically so I want to use more hooks and probably making my own ***custom hooks*** :smile:.
 
-Also I'll be adding two sections to my README from now and on at final stage of the project to tell my experience about **What I learned** and **Continued Development**.
+Also I want to ***use styled components*** which I haven't never implemented or studied however I want to push myself a little bit and learn by doing, researching, reading documentation, and asking.
+
+Finally I want to use Redux Thunk to make asynchronous logic inside ***Redux*** :stars:.
+
 ### Built With :computer:
 
 This component is developed with:
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) _version: 5_
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) _version: 3_
+* [Styled Components](https://styled-components.com/) _version: 5.2.3_
 * [React](https://reactjs.org/) _version: 17.0.1_
 * [React-React-App](https://create-react-app.dev/) _version: 4.0.3_
 * [React DOM](https://reactjs.org/docs/react-dom.html) _version: 17.0.1_
 * [React Scripts](https://create-react-app.dev/docs/available-scripts/) _version: 4.0.3_
 * [Redux](https://redux.js.org/) _version: 4.0.5_
+* [Redux Thunk](https://redux.js.org/) _version: 2.3.0_
 * [React Redux](https://react-redux.js.org/) _version: 7.2.3_
 * [Redux Toolkit](https://redux-toolkit.js.org/) _version: 1.5.0_
 * [Normalize](https://necolas.github.io/normalize.css/) _version: 8.0.1_
@@ -79,7 +84,7 @@ If you want to check out the website in production with github pages visit the l
 
 * Link to the project:
   ```sh
-  https://darubiomunoz.github.io/portfolio-10-joblistingwithfiltering
+  https://darubiomunoz.github.io/portfolio-11-countries
   ```
 
 ### Installation  :exclamation:
@@ -88,38 +93,31 @@ If you want to check out the website in production with github pages visit the l
    ```sh
     npm install -g create-react-app
    ```
-   ```sh
-    yaml install -g create-react-app
-   ```
 
 2. Clone the repo
    ```sh
-   git clone https://github.com/darubiomunoz/portfolio-10-joblistingwithfiltering.git
+   git clone https://github.com/darubiomunoz/portfolio-11-countries.git
    ```
    ```sh
-   git clone git@github.com:darubiomunoz/portfolio-10-joblistingwithfiltering.git
+   git clone git@github.com:darubiomunoz/portfolio-11-countries.git
    ```
    ```sh
-   gh repo clone darubiomunoz/portfolio-10-joblistingwithfiltering
+   gh repo clone darubiomunoz/portfolio-11-countries
    ```
 
 3. Install all the dependencies required with:
    ```sh
    npm install
-
-   yaml install
    ```
 
 4. Run the react development server:
     ```sh
     npm run start
-
-    yaml run start
     ```
 <!-- USAGE EXAMPLES -->
 ## 3. Usage :star2:
 
-Feel free to download the code if you need a template for your own ***job listing*** and modify it as you want to fit your project, just remember to install all the required dependencies to run it properly.
+Feel free to download the code if you need a template for your own ***project*** and modify it as you want to fit your project, just remember to install all the required dependencies to run it properly.
 
 _For more knowledge, please refer to the [Documentation](https://reactjs.org/)_
 
@@ -137,7 +135,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- Status -->
 ## 5. Status :memo:
 
-The project is `Finished`.
+The project is `Under Development`.
 
 <!-- WHAT I LEARNED -->
 <!--
@@ -145,7 +143,9 @@ Use this section to recap over some of your major learnings while working throug
  -->
 ## 6. What I learned :mortar_board:
 
-Well, as I expected, implementing Redux by myself for the first time was really confusing even when a made a course about **Redux**. I spend so much time trying to learn about Redux and its environment, the learning curve it's actually quite long because it isn't only Redux if not **React Redux**, **Redux Toolkit**, and **Redux Thunk** that I didn't used in this project but I will in the next personal project so that I dive more into the understand of Redux.
+This section will be filled at the end of the project.
+
+<!-- Well, as I expected, implementing Redux by myself for the first time was really confusing even when a made a course about **Redux**. I spend so much time trying to learn about Redux and its environment, the learning curve it's actually quite long because it isn't only Redux if not **React Redux**, **Redux Toolkit**, and **Redux Thunk** that I didn't used in this project but I will in the next personal project so that I dive more into the understand of Redux.
 
 **I struggle a lot using Redux toolkit** at first, but later in the project I found the biggest wall that was **writing the reducer functions** inside of the store's slices to filter the list of job offers by categories. I was able to find a way to finish the reducer function by **reading much of the Redux and Redux Toolkit documentation**, **reading some articles** I found on the internet, and **searching on google a lot**.
 
@@ -200,7 +200,7 @@ These are some fractions of code where I struggled and came up with solutions.
     if (!tools.includes(category) && tools.length > 0)
       dispatch(filterByTools({ tools }));
   };
-```
+``` -->
 
 <!-- LICENSE -->
 ## 7. License :memo:
@@ -214,7 +214,7 @@ Diego Rubio
 [Linkedin](https://www.linkedin.com/in/darmdev/)
 darubiomunoz@gmail.com
 
-Project Link: [https://darubiomunoz.github.io/portfolio-10-joblistingwithfiltering](https://darubiomunoz.github.io/portfolio-10-joblistingwithfiltering)
+Project Link: [https://darubiomunoz.github.io/portfolio-11-countries](https://darubiomunoz.github.io/portfolio-11-countries)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## 9. Acknowledgements :clap:
@@ -222,13 +222,14 @@ Project Link: [https://darubiomunoz.github.io/portfolio-10-joblistingwithfilteri
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+* [Styled Components](https://styled-components.com/)
 * [React](https://reactjs.org/)
-* [React-React-App](https://create-react-app.dev/) 
+* [React-React-App](https://create-react-app.dev/)
 * [React DOM](https://reactjs.org/docs/react-dom.html)
 * [React Scripts](https://create-react-app.dev/docs/available-scripts/)
 * [Redux](https://redux.js.org/)
+* [Redux Thunk](https://redux.js.org/)
 * [React Redux](https://react-redux.js.org/)
-
 * [Redux Toolkit](https://redux-toolkit.js.org/)
 * [Normalize](https://necolas.github.io/normalize.css/)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript)
