@@ -1,24 +1,16 @@
-import styled from 'styled-components';
-
-const Nav = styled.nav`
-background-color: red;
-`
+import StyledHeader from '../styles/StyledHeader';
+import StyledTitle from '../styles/StyledTitle';
+import StyledDarkButton from "../styles/StyledDarkButton";
 
 const Header = () => {
   return (
-    <Nav>
-      <ul>
-        <li>
-          <h1>Where in the world?</h1>
-        </li>
-        <li>
-          <button type="button">
-            <i className=""></i>
-            Dark Mode
-          </button>
-        </li>
-      </ul>
-    </Nav>
+    <StyledHeader>
+      <StyledTitle>Where in the world?</StyledTitle>
+      <StyledDarkButton>
+        <i className=""></i>
+        Dark Mode
+      </StyledDarkButton>
+    </StyledHeader>
   );
 }
 

@@ -32,6 +32,8 @@ export const spacingNormal = `30px`;
 export const spacingLarge = `40px`;
 export const spacingExtraLarge = `50px`;
 
+export const boxShadow = `0px 13px 20px 0px rgba(173,164,164,0.75);`;
+
 export const zIndexBackground = `0`;
 export const zIndexNormal = `10`;
 export const zIndexDropDown = `1000`;
