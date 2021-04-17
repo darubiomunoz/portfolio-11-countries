@@ -1,3 +1,12 @@
-const HomePage = () => (<h1>HomePage</h1>);
+import Header from "../components/Header";
+
+const HomePage = () => {
+  return (
+    <>
+      <Header />
+      <h1>HomePage</h1>
+    </>
+  );
+};
 
 export default HomePage;
