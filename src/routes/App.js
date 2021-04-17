@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import './App.css';
+import '../styles/routes/App.css';
 
 import HomePage from '../pages/HomePage';
 import Country from '../pages/Country';
