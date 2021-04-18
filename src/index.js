@@ -1,8 +1,6 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 
-import styled from "styled-components";
-
 import App from "./routes/App";
 
 import store from "./app/store";

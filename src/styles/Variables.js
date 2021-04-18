@@ -26,13 +26,21 @@ export const breakpointMobile = `375px`;
 export const breakpointTablet = `600px`;
 export const breakpointDesktop = `1024px`;
 
+export const spacingExtraSmall = `5px`;
 export const spacingSmall = `10px`;
 export const spacingRegular = `20px`;
 export const spacingNormal = `30px`;
 export const spacingLarge = `40px`;
 export const spacingExtraLarge = `50px`;
 
-export const boxShadow = `0px 6px 20px 0px rgba(173,164,164,0.5);`;
+export const borderRadiusExtraSmall = `5px`;
+export const borderRadiusSmall = `10px`;
+export const borderRadiusRegular = `20px`;
+export const borderRadiusNormal = `30px`;
+export const borderRadiusLarge = `40px`;
+export const borderRadiusExtraLarge = `50px`;
+
+export const boxShadow = `0px 3px 10px 0px rgba(173,164,164,0.5);`;
 
 export const zIndexBackground = `0`;
 export const zIndexNormal = `10`;
