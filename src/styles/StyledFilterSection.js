@@ -2,9 +2,13 @@ import styled from 'styled-components';
 
 import StyledSearchSection from './StyledSearchSection';
 
+import { spacingExtraSmall } from './Variables';
+
 const StyledFilterSection = styled(StyledSearchSection)`
   padding-top: 0;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: ${spacingExtraSmall};
 `;
 
 export default StyledFilterSection;

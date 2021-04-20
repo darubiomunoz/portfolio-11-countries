@@ -2,10 +2,16 @@ import StyledFilterSection from '../styles/StyledFilterSection';
 import StyledFilterDiv from '../styles/StyledFilterDiv';
 import StyledLabel from '../styles/StyledLabel';
 import StyledRadioInput from '../styles/StyledRadioInput';
+import StyledFilterButton from '../styles/StyledFilterButton';
+import StyledFilterIcon from '../styles/StyledFilterIcon';
 
 const Filter = () => {
   return (
     <StyledFilterSection>
+      <StyledFilterButton>
+        Filter by Region
+        <StyledFilterIcon className="fas fa-angle-down" />
+      </StyledFilterButton>
       <StyledFilterDiv>
         <StyledLabel for="Africa">Africa</StyledLabel>
         <StyledRadioInput

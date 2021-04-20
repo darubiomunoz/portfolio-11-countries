@@ -5,7 +5,7 @@ import StyledDiv from './StyledDiv';
 import { spacingExtraSmall, spacingSmall } from './Variables'
 
 const StyledFilterDiv = styled(StyledDiv)`
-  width: 50%;
+  width: 65%;
   height: fit-content;
   padding: ${spacingSmall};
   flex-direction: column;
