@@ -2,11 +2,14 @@ import styled from 'styled-components';
 
 import StyledDiv from './StyledDiv';
 
-import { colorOption4, colorOption5, spacingNormal, spacingExtraSmall } from './Variables'
+import { spacingExtraSmall, spacingSmall } from './Variables'
 
 const StyledFilterDiv = styled(StyledDiv)`
   width: 50%;
-  padding: 0 ${spacingExtraSmall};
+  height: fit-content;
+  padding: ${spacingSmall};
+  flex-direction: column;
+  gap: ${spacingExtraSmall};
 `;
 
 export default StyledFilterDiv;
