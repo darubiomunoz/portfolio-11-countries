@@ -13,30 +13,30 @@ const Filter = () => {
         <StyledFilterIcon className="fas fa-angle-down" />
       </StyledFilterButton>
       <StyledFilterDiv>
-        <StyledLabel for="Africa">Africa</StyledLabel>
+        <StyledLabel htmlFor="Africa">Africa</StyledLabel>
         <StyledRadioInput
           id="Africa"
           value="Africa"
           name="category"
           type="radio"
         />
-        <StyledLabel for="America">America</StyledLabel>
+        <StyledLabel htmlFor="America">America</StyledLabel>
         <StyledRadioInput
           id="America"
           value="America"
           name="category"
           type="radio"
         />
-        <StyledLabel for="Asia">Asia</StyledLabel>
+        <StyledLabel htmlFor="Asia">Asia</StyledLabel>
         <StyledRadioInput id="Asia" value="Asia" name="category" type="radio" />
-        <StyledLabel for="Europe">Europe</StyledLabel>
+        <StyledLabel htmlFor="Europe">Europe</StyledLabel>
         <StyledRadioInput
           id="Europe"
           value="Europe"
           name="category"
           type="radio"
         />
-        <StyledLabel for="Oceania">Oceania</StyledLabel>
+        <StyledLabel htmlFor="Oceania">Oceania</StyledLabel>
         <StyledRadioInput
           id="Oceania"
           value="Oceania"
