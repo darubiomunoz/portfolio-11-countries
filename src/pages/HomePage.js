@@ -9,9 +9,7 @@ const HomePage = () => {
       <Header />
       <SearchBar />
       <Filter />
-      <Countries>
-        
-      </Countries>
+      <Countries />
     </>
   );
 }; 

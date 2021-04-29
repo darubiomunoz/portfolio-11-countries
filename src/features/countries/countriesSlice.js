@@ -12,12 +12,11 @@ export const fetchData = createAsyncThunk('countries/fetchCountries', async () =
   const response = await fetch(API_URL);
   if(!response.ok) console.error(response.status);
   const data = response.json();
-  console.log(data);
   return data;
 });
 
 export const countriesSlice = createSlice({
-  name: "countries",
+  name: "countries", 
   initialState,
   reducers: {},
   extraReducers: {

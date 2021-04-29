@@ -4,7 +4,7 @@ import { fetchData } from "../features/countries/countriesSlice";
 
 import StyledCountriesSection from "../styles/StyledCountriesSection";
 
-const Countries = ({ children }) => {
+const Countries = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries.data);
   const countriesStatus = useSelector((state) => state.countries.status);
@@ -18,7 +18,8 @@ const Countries = ({ children }) => {
 
   return (
     <StyledCountriesSection>
-      {children}
+      {countries.length === 0 && <h1>Loading...</h1>}
+      {/* {countries.map()} */}
     </StyledCountriesSection>
   );
 };
