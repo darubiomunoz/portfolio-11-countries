@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import StyledSearchSection from "./StyledSearchSection";
+import StyledSearchSection from "../StyledSearchSection";
 
-import { spacingNormal, spacingExtraSmall } from "./Variables";
+import { spacingNormal, spacingExtraSmall } from "../Variables";
 
 const StyledCountriesSection = styled(StyledSearchSection)`
   padding: 0;

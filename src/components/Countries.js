@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { nanoid } from '@reduxjs/toolkit';
 import { fetchData } from "../features/countries/countriesSlice";
 
-import StyledCountriesSection from "../styles/StyledCountriesSection";
+import StyledCountriesSection from "../styles/components/StyledCountriesSection";
+import StyledCard from '../styles/components/StyledCard';
+import StyledFlagImg from '../styles/components/StyledFlagImg';
 
 const Countries = () => {
   const dispatch = useDispatch();
@@ -14,12 +17,17 @@ const Countries = () => {
     console.log(countries);
   }, [countriesStatus, dispatch]);
 
-  console.log(countries)
-
   return (
     <StyledCountriesSection>
       {countries.length === 0 && <h1>Loading...</h1>}
-      {/* {countries.map()} */}
+      {countries.map(country => {
+        return (
+          <StyledCard key={nanoid()}>
+            <StyledFlagImg src={country.flag} alt="" />
+            hola
+          </StyledCard>
+        );
+      })}
     </StyledCountriesSection>
   );
 };
