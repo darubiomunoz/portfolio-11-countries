@@ -8,6 +8,8 @@ import StyledCard from "../styles/components/StyledCard";
 import StyledFlagImg from "../styles/components/StyledFlagImg";
 import StyledInfoArticle from "../styles/components/StyledInfoArticle";
 import StyledTitle from '../styles/components/StyledTitle';
+import StyledDetailsDiv from '../styles/components/StyledDetailsDiv';
+import StyledDetailSpan from '../styles/components/StyledDetailSpan';
 
 const Countries = () => {
   const dispatch = useDispatch();
@@ -31,6 +33,18 @@ const Countries = () => {
             />
             <StyledInfoArticle>
               <StyledTitle>{country.name}</StyledTitle>
+              <StyledDetailsDiv>
+                <StyledDetailSpan bold>Population:</StyledDetailSpan>
+                <StyledDetailSpan>{country.population}</StyledDetailSpan>
+              </StyledDetailsDiv>
+              <StyledDetailsDiv>
+                <StyledDetailSpan bold>Region:</StyledDetailSpan>
+                <StyledDetailSpan>{country.region}</StyledDetailSpan>
+              </StyledDetailsDiv>
+              <StyledDetailsDiv>
+                <StyledDetailSpan bold>Capital:</StyledDetailSpan>
+                <StyledDetailSpan>{country.capital}</StyledDetailSpan>
+              </StyledDetailsDiv>
             </StyledInfoArticle>
           </StyledCard>
         );
