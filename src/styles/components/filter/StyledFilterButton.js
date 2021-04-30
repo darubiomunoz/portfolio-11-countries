@@ -13,6 +13,7 @@ const StyledFilterButton = styled(StyledDarkButton)`
   font-size: ${fontSizeSmall};
   border-radius: ${borderRadiusExtraSmall};
   box-shadow: ${boxShadow};
+  cursor: pointer;
 `;
 
 export default StyledFilterButton;

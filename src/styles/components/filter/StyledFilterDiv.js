@@ -10,7 +10,7 @@ const StyledFilterDiv = styled(StyledDiv)`
   padding: ${spacingSmall};
   flex-direction: column;
   gap: ${spacingExtraSmall};
-  display: none;
+  display: ${props => props.invisible ? 'none' : ''};
 `;
 
 export default StyledFilterDiv;

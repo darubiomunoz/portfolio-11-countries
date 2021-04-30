@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import StyledFilterSection from '../styles/components/filter/StyledFilterSection';
 import StyledFilterDiv from '../styles/components/filter/StyledFilterDiv';
 import StyledLabel from '../styles/components/filter/StyledLabel';
@@ -6,13 +8,19 @@ import StyledFilterButton from '../styles/components/filter/StyledFilterButton';
 import StyledFilterIcon from '../styles/components/filter/StyledFilterIcon';
 
 const Filter = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  }
+
   return (
     <StyledFilterSection>
-      <StyledFilterButton>
+      <StyledFilterButton onClick={handleClick}>
         Filter by Region
         <StyledFilterIcon className="fas fa-angle-down" />
       </StyledFilterButton>
-      <StyledFilterDiv>
+      <StyledFilterDiv invisible={open ? '' : 'invisible'} >
         <StyledLabel htmlFor="Africa">Africa</StyledLabel>
         <StyledRadioInput
           id="Africa"
