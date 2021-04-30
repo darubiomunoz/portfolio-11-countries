@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacingRegular, spacingSmall } from '../Variables';
+import { spacingRegular, spacingSmall } from '../../Variables';
 
 const StyledInfoArticle = styled.article`
   width: 100%;

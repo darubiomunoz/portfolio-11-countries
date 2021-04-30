@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { borderRadiusExtraSmall } from '../Variables';
+import { borderRadiusExtraSmall } from '../../Variables';
 
 const StyledFlagImg = styled.img`
   width: 100%;

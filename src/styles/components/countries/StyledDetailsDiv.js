@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacingExtraSmall } from '../Variables';
+import { spacingExtraSmall } from '../../Variables';
 
 const StyledDetailsDiv = styled.div`
   width: 100%;

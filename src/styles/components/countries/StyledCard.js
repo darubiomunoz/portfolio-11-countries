@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { colorOption5, borderRadiusExtraSmall,boxShadow } from '../Variables';
+import { colorOption5, borderRadiusExtraSmall,boxShadow } from '../../Variables';
 
 const StyledCard = styled.div`
   width: 70%;

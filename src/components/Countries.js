@@ -5,13 +5,13 @@ import { nanoid } from "@reduxjs/toolkit";
 
 import { fetchData } from "../features/countries/countriesSlice";
 
-import StyledCountriesSection from "../styles/components/StyledCountriesSection";
-import StyledCard from "../styles/components/StyledCard";
-import StyledFlagImg from "../styles/components/StyledFlagImg";
-import StyledInfoArticle from "../styles/components/StyledInfoArticle";
-import StyledTitle from '../styles/components/StyledTitle';
-import StyledDetailsDiv from '../styles/components/StyledDetailsDiv';
-import StyledDetailSpan from '../styles/components/StyledDetailSpan';
+import StyledCountriesSection from "../styles/components/countries/StyledCountriesSection";
+import StyledCard from "../styles/components/countries/StyledCard";
+import StyledFlagImg from "../styles/components/countries/StyledFlagImg";
+import StyledInfoArticle from "../styles/components/countries/StyledInfoArticle";
+import StyledTitle from '../styles/components/countries/StyledTitle';
+import StyledDetailsDiv from '../styles/components/countries/StyledDetailsDiv';
+import StyledDetailSpan from '../styles/components/countries/StyledDetailSpan';
 
 const Countries = () => {
   const dispatch = useDispatch();

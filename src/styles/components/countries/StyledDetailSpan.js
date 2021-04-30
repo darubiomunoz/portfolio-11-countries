@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {fontSizeSmall, fontWeightBold, fontWeightNormal  } from '../Variables';
+import {fontSizeSmall, fontWeightBold, fontWeightNormal  } from '../../Variables';
 
 const StyledDetailSpan = styled.span`
   font-size: ${fontSizeSmall};
