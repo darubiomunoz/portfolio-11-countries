@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { fontSizeSmall, spacingSmall } from './Variables';
+import { fontSizeSmall, spacingSmall } from '../../Variables';
 
 const StyledIcon = styled.i`
   font-size: ${fontSizeSmall};

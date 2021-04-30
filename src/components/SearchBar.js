@@ -1,9 +1,9 @@
-import StyledSearchSection from '../styles/StyledSearchSection';
-import StyledInputIcon from '../styles/StyledInputIcon';
-import StyledDiv from '../styles/StyledDiv';
-import StyledInput from '../styles/StyledInput';
+import StyledSearchSection from '../styles/components/search_bar/StyledSearchSection';
+import StyledInputIcon from '../styles/components/search_bar/StyledInputIcon';
+import StyledDiv from '../styles/components/search_bar/StyledDiv';
+import StyledInput from '../styles/components/search_bar/StyledInput';
 
-const SearchBar = () => {
+const SearchBar = () => { 
   return (
     <StyledSearchSection>
       <StyledDiv>

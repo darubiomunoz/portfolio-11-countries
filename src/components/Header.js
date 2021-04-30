@@ -1,11 +1,11 @@
-import StyledHeader from "../styles/StyledHeader";
-import StyledTitle from "../styles/StyledTitle";
-import StyledDarkButton from "../styles/StyledDarkButton";
-import StyledIcon from "../styles/StyledIcon";
+import StyledHeader from "../styles/components/header/StyledHeader";
+import StyledTitle from "../styles/components/header/StyledTitle";
+import StyledDarkButton from "../styles/components/header/StyledDarkButton";
+import StyledIcon from "../styles/components/header/StyledIcon";
 
 
 const Header = () => {
-  return (
+  return ( 
     <StyledHeader>
       <StyledTitle>Where in the world?</StyledTitle>
       <StyledDarkButton>

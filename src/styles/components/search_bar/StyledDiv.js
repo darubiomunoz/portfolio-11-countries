@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colorOption4, colorOption5, spacingNormal, spacingRegular, boxShadow, borderRadiusExtraSmall } from './Variables'
+import { colorOption4, colorOption5, spacingNormal, spacingRegular, boxShadow, borderRadiusExtraSmall } from '../../Variables'
 
 const StyledDiv = styled.div`
   width: 100%;

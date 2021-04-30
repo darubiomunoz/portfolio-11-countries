@@ -1,9 +1,9 @@
-import StyledFilterSection from '../styles/StyledFilterSection';
-import StyledFilterDiv from '../styles/StyledFilterDiv';
-import StyledLabel from '../styles/StyledLabel';
-import StyledRadioInput from '../styles/StyledRadioInput';
-import StyledFilterButton from '../styles/StyledFilterButton';
-import StyledFilterIcon from '../styles/StyledFilterIcon';
+import StyledFilterSection from '../styles/components/filter/StyledFilterSection';
+import StyledFilterDiv from '../styles/components/filter/StyledFilterDiv';
+import StyledLabel from '../styles/components/filter/StyledLabel';
+import StyledRadioInput from '../styles/components/filter/StyledRadioInput';
+import StyledFilterButton from '../styles/components/filter/StyledFilterButton';
+import StyledFilterIcon from '../styles/components/filter/StyledFilterIcon';
 
 const Filter = () => {
   return (

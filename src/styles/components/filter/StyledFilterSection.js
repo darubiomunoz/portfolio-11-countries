@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import StyledSearchSection from './StyledSearchSection';
+import StyledSearchSection from '../search_bar/StyledSearchSection';
 
-import { spacingExtraSmall } from './Variables';
+import { spacingExtraSmall } from '../../Variables';
 
 const StyledFilterSection = styled(StyledSearchSection)`
   padding-top: 0;

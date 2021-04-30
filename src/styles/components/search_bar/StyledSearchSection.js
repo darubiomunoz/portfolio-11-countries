@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacingNormal, spacingRegular } from './Variables';
+import { spacingNormal, spacingRegular } from '../../Variables';
 
 const StyledSearchSection = styled.section`
   width: 100%;

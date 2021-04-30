@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import StyledIcon from './StyledIcon';
+import StyledIcon from '../header/StyledIcon';
 
-import { colorOption4 } from './Variables';
+import { colorOption4 } from '../../Variables';
 
 const StyledInputIcon = styled(StyledIcon)`
   color: ${colorOption4};

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colorOption1, fontSizeSmall } from './Variables';
+import { colorOption1, fontSizeSmall } from '../../Variables';
 
 const StyledLabel = styled.label`
   width: 100%;

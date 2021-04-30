@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colorOption1, fontSizeSmall, fontWeightNormal } from './Variables';
+import { colorOption1, fontSizeSmall, fontWeightNormal } from '../../Variables';
 
 const StyledDarkButton = styled.button`
   display: flex;

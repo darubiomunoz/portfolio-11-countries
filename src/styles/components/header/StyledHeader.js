@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacingSmall, boxShadow, colorOption5 } from './Variables';
+import { spacingSmall, boxShadow, colorOption5 } from '../../Variables';
 
 const StyledHeader = styled.header`
   width: 100%;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import StyledSearchSection from "../../StyledSearchSection";
+import StyledSearchSection from "../search_bar/StyledSearchSection";
 
 import { spacingNormal, spacingRegular } from "../../Variables";
 

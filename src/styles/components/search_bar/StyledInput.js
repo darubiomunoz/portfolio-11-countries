@@ -7,7 +7,7 @@ import {
   spacingExtraSmall,
   borderRadiusExtraSmall,
   fontSizeSmall
-} from "./Variables";
+} from "../../Variables";
 
 const StyledInput = styled.input`
   width: 90%;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import StyledDarkButton from './StyledDarkButton';
+import StyledDarkButton from '../header/StyledDarkButton';
 
-import { spacingSmall, fontSizeSmall, borderRadiusExtraSmall, boxShadow } from './Variables';
+import { spacingSmall, fontSizeSmall, borderRadiusExtraSmall, boxShadow } from '../../Variables';
 
 const StyledFilterButton = styled(StyledDarkButton)`
   width: 65%;
