@@ -4,7 +4,7 @@ import { fontSizeNormal, fontWeightExtraBold, spacingSmall } from '../Variables'
 
 const StyledTitle = styled.h3`
   margin-bottom: ${spacingSmall};
-  text-align: center;
+  text-align: start;
   font-size: ${fontSizeNormal};
   font-weight: ${fontWeightExtraBold};
 `;
