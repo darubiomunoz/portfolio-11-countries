@@ -39,7 +39,7 @@ const Countries = () => {
 
   return (
     <StyledCountriesSection>
-      {countries.length === 0 && <h1>Loading...</h1>}
+      {countries.length === 0 && <StyledTitle>Loading...</StyledTitle>}
       {countries.map((country) => {
         return (
           <StyledCard key={nanoid()}>
@@ -52,7 +52,9 @@ const Countries = () => {
               <StyledTitle>{country.name}</StyledTitle>
               <StyledDetailsDiv>
                 <StyledDetailSpan bold>Population:</StyledDetailSpan>
-                <StyledDetailSpan>{formatNumber(country.population)}</StyledDetailSpan>
+                <StyledDetailSpan>
+                  {formatNumber(country.population)}
+                </StyledDetailSpan>
               </StyledDetailsDiv>
               <StyledDetailsDiv>
                 <StyledDetailSpan bold>Region:</StyledDetailSpan>
