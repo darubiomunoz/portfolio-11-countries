@@ -18,7 +18,7 @@ const Filter = () => {
     <StyledFilterSection>
       <StyledFilterButton onClick={handleClick}>
         Filter by Region
-        <StyledFilterIcon className="fas fa-angle-down" />
+        <StyledFilterIcon className={`fas fa-angle-${open ? 'up' : 'down'}`} />
       </StyledFilterButton>
       <StyledFilterDiv invisible={open ? '' : 'invisible'} >
         <StyledLabel htmlFor="Africa">Africa</StyledLabel>
