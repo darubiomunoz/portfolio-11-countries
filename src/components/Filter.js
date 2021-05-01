@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import StyledFilterSection from "../styles/components/filter/StyledFilterSection";
 import StyledFilterDiv from "../styles/components/filter/StyledFilterDiv";
@@ -7,16 +8,20 @@ import StyledRadioInput from "../styles/components/filter/StyledRadioInput";
 import StyledFilterButton from "../styles/components/filter/StyledFilterButton";
 import StyledFilterIcon from "../styles/components/filter/StyledFilterIcon";
 
+import { updateFilter } from "../features/filter/filterSlice";
+
 const Filter = () => {
   const [open, setOpen] = useState(false);
-  const [filter, setFilter] = useState("Filter by Region");
+  const dispatch = useDispatch();
+  const filter = useSelector((state) => state.filter);
 
   const handleClick = () => {
     setOpen(!open);
   };
 
   const handleFiltering = (event) => {
-    setFilter(event.target.htmlFor);
+    const category = event.target.htmlFor;
+    dispatch(updateFilter({ category }));
     setOpen(!open);
   };
 
