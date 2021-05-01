@@ -5,9 +5,11 @@ import StyledDiv from '../search_bar/StyledDiv';
 import { spacingExtraSmall, spacingSmall } from '../../Variables'
 
 const StyledFilterDiv = styled(StyledDiv)`
-  width: 65%;
+  width: 130px;
   height: fit-content;
   padding: ${spacingSmall};
+  position: absolute;
+  top: 40px;
   flex-direction: column;
   gap: ${spacingExtraSmall};
   display: ${props => props.invisible ? 'none' : ''};
