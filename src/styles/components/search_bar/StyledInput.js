@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 import {
-  colorOption4,
-  colorOption5,
   spacingRegular,
   spacingExtraSmall,
   borderRadiusExtraSmall,
@@ -13,12 +11,12 @@ const StyledInput = styled.input`
   width: 90%;
   height: ${spacingRegular};
   padding: ${spacingExtraSmall} ${spacingRegular};
-  padding-left: 0;
+  padding-left: ${spacingExtraSmall};
   border: none;
   border-radius: ${borderRadiusExtraSmall};
   font-size: ${fontSizeSmall};
-  background-color: ${colorOption5};
-  color: ${colorOption4};
+  background-color: ${props => props.theme.headerBackground};
+  color: ${props => props.theme.font};
 `;
 
 export default StyledInput;
