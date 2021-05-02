@@ -6,9 +6,9 @@ import StyledDarkButton from "../styles/components/header/StyledDarkButton";
 import StyledIcon from "../styles/components/header/StyledIcon";
 
 const Header = () => {
-  const [theme, SetTheme] = useState('light');
+  const [theme, setTheme] = useState('light');
 
-  const handleClick = () => theme === 'light' ? SetTheme('dark') : SetTheme('light');
+  const handleClick = () => theme === 'light' ? setTheme('dark') : setTheme('light');
 
   return ( 
     <StyledHeader>
