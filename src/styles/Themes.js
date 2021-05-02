@@ -1,11 +1,13 @@
-import { colorOption5, colorOption1 } from './Variables';
+import { colorOption5, colorOption1, boxShadow } from './Variables';
 
 export const light = {
-  body: colorOption5,
+  headerBackground: colorOption5,
   font: colorOption1,
+  shadow: boxShadow,
 };
 
 export const dark = {
-  body: colorOption1,
+  headerBackground: colorOption1,
   font: colorOption5,
+  shadow: '',
 };

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacingSmall, boxShadow, colorOption5 } from '../../Variables';
+import { spacingSmall } from '../../Variables';
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -10,8 +10,8 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: ${boxShadow};
-  background-color: ${colorOption5};
+  box-shadow: ${props => props.theme.shadow};
+  background-color: ${props => props.theme.headerBackground};
 `;
 
 export default StyledHeader;

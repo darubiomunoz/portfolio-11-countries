@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colorOption1, fontSizeSmall, fontWeightNormal } from '../../Variables';
+import { fontSizeSmall, fontWeightNormal } from '../../Variables';
 
 const StyledDarkButton = styled.button`
   display: flex;
@@ -9,7 +9,7 @@ const StyledDarkButton = styled.button`
   font-size: ${fontSizeSmall};
   font-weight: ${fontWeightNormal};
   background-color: transparent;
-  color: ${colorOption1};
+  color: ${props => props.theme.font};
 `;
 
 export default StyledDarkButton;
