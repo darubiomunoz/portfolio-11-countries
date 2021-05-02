@@ -1,3 +1,5 @@
+import { useSelector } from 'react-redux';
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from 'styled-components';
 
@@ -10,6 +12,8 @@ import Country from "../pages/Country";
 import NotFound from "../pages/NotFound";
 
 const App = () => {
+  const theme = useSelector(state => state.theme);
+
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme === 'light' ? light : dark}>

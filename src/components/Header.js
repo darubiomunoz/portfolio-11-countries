@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { changeTheme } from '../features/theme/themeSlice';
 
 import StyledHeader from "../styles/components/header/StyledHeader";
 import StyledTitle from "../styles/components/header/StyledTitle";
@@ -6,9 +8,10 @@ import StyledDarkButton from "../styles/components/header/StyledDarkButton";
 import StyledIcon from "../styles/components/header/StyledIcon";
 
 const Header = () => {
-  const [theme, setTheme] = useState('light');
+  const theme = useSelector(state => state.theme);
+  const dispatch = useDispatch();
 
-  const handleClick = () => theme === 'light' ? setTheme('dark') : setTheme('light');
+  const handleClick = () => dispatch(changeTheme());
 
   return ( 
     <StyledHeader>
