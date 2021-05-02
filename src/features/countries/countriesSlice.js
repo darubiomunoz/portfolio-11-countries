@@ -35,6 +35,9 @@ export const countriesSlice = createSlice({
       if (filter !== "Filter by Region") state.data = newData;
       if (filter === "Filter by Region") state.data = state.dataSafeCopy;
     },
+    searchBy: (state, action) => {
+      console.log('search bitch!');
+    },
   },
   extraReducers: {
     [fetchData.pending]: (state) => {

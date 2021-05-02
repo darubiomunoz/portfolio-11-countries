@@ -38,7 +38,6 @@ const Countries = () => {
 
   return (
     <StyledCountriesSection>
-      {console.log(countries)}
       {countries.length === 0 && <StyledTitle>Loading...</StyledTitle>}
       {countries.map((country) => {
         return (

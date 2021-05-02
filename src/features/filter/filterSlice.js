@@ -10,7 +10,7 @@ export const filterSlice = createSlice({
       const { category } = action.payload;
       return category;
     }
-  }
+  },
 });
 
 export const { updateFilter } = filterSlice.actions;
