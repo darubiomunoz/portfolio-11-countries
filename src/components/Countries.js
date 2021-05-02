@@ -38,7 +38,7 @@ const Countries = () => {
 
   return (
     <StyledCountriesSection>
-      {countries.length === 0 && <StyledTitle>Loading...</StyledTitle>}
+      {countriesStatus !== 'fulfilled' && <StyledTitle>Loading...</StyledTitle>}
       {countries.map((country) => {
         return (
           <StyledCard key={nanoid()}>

@@ -36,7 +36,13 @@ export const countriesSlice = createSlice({
       if (filter === "Filter by Region") state.data = state.dataSafeCopy;
     },
     searchBy: (state, action) => {
-      console.log('search bitch!');
+      const { search } = action.payload;
+
+      state.data = state.dataSafeCopy;
+
+      const newData = state.data.filter(country => country.name.toLowerCase().includes(search.toLowerCase()));
+
+      state.data = newData;
     },
   },
   extraReducers: {
@@ -59,6 +65,6 @@ export const countriesSlice = createSlice({
   },
 });
 
-export const { filterBy } = countriesSlice.actions;
+export const { filterBy, searchBy } = countriesSlice.actions;
 
 export default countriesSlice.reducer;
