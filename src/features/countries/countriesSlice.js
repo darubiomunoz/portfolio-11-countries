@@ -31,8 +31,9 @@ export const countriesSlice = createSlice({
       state.data = state.dataSafeCopy;
 
       const newData = state.data.filter(country => country.region === filter);
-      
+
       if (filter !== "Filter by Region") state.data = newData;
+      if (filter === "Filter by Region") state.data = state.dataSafeCopy;
     },
   },
   extraReducers: {

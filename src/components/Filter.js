@@ -9,7 +9,7 @@ import StyledFilterButton from "../styles/components/filter/StyledFilterButton";
 import StyledFilterIcon from "../styles/components/filter/StyledFilterIcon";
 
 import { updateFilter } from "../features/filter/filterSlice";
-import { filterBy } from '../features/countries/countriesSlice';
+import { filterBy } from "../features/countries/countriesSlice";
 
 const Filter = () => {
   const [open, setOpen] = useState(false);
@@ -37,6 +37,22 @@ const Filter = () => {
         <StyledFilterIcon className={`fas fa-angle-${open ? "up" : "down"}`} />
       </StyledFilterButton>
       <StyledFilterDiv invisible={open ? "" : "invisible"}>
+        {filter !== "Filter by Region" && (
+          <>
+            <StyledLabel
+              htmlFor="Filter by Region"
+              onClick={(event) => handleFiltering(event)}
+            >
+              Filter by Region
+            </StyledLabel>
+            <StyledRadioInput
+              id="Filter by Region"
+              value="Filter by Region"
+              name="category"
+              type="radio"
+            />
+          </>
+        )}
         <StyledLabel
           htmlFor="Africa"
           onClick={(event) => handleFiltering(event)}
