@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import StyledFilterSection from "../styles/components/filter/StyledFilterSection";
@@ -9,6 +9,7 @@ import StyledFilterButton from "../styles/components/filter/StyledFilterButton";
 import StyledFilterIcon from "../styles/components/filter/StyledFilterIcon";
 
 import { updateFilter } from "../features/filter/filterSlice";
+import { filterBy } from '../features/countries/countriesSlice';
 
 const Filter = () => {
   const [open, setOpen] = useState(false);
@@ -24,6 +25,10 @@ const Filter = () => {
     dispatch(updateFilter({ category }));
     setOpen(!open);
   };
+
+  useEffect(() => {
+    dispatch(filterBy({ filter }));
+  }, [filter]);
 
   return (
     <StyledFilterSection>

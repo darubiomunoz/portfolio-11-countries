@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import StyledSearchSection from "../search_bar/StyledSearchSection";
 
-import { spacingNormal, spacingRegular } from "../../Variables";
+import { spacingNormal } from "../../Variables";
 
 const StyledCountriesSection = styled(StyledSearchSection)`
   padding: 0;

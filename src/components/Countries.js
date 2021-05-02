@@ -20,7 +20,6 @@ const Countries = () => {
 
   useEffect(() => {
     if (countriesStatus === "idle") dispatch(fetchData());
-    console.log(countries);
   }, [countriesStatus, dispatch]);
 
   const formatNumber = (string) => {
@@ -39,6 +38,7 @@ const Countries = () => {
 
   return (
     <StyledCountriesSection>
+      {console.log(countries)}
       {countries.length === 0 && <StyledTitle>Loading...</StyledTitle>}
       {countries.map((country) => {
         return (

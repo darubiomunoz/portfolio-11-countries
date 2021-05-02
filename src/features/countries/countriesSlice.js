@@ -1,24 +1,40 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
 
 const API_URL = "https://restcountries.eu/rest/v2/all";
 
 const initialState = {
   data: [],
-  status: 'idle',
+  dataSafeCopy: [],
+  status: "idle",
   error: null,
 };
 
-export const fetchData = createAsyncThunk('countries/fetchCountries', async () => {
-  const response = await fetch(API_URL);
-  if(!response.ok) console.error(response.status);
-  const data = response.json();
-  return data;
-});
+export const fetchData = createAsyncThunk(
+  "countries/fetchCountries",
+  async () => {
+    const response = await fetch(API_URL);
+    if (!response.ok) console.error(response.status);
+    const data = response.json();
+    return data;
+  }
+);
 
 export const countriesSlice = createSlice({
-  name: "countries", 
+  name: "countries",
   initialState,
-  reducers: {},
+  reducers: {
+    filterBy: (state, action) => {
+      let { filter } = action.payload;
+
+      if (filter === 'America') filter = 'Americas';
+
+      state.data = state.dataSafeCopy;
+
+      const newData = state.data.filter(country => country.region === filter);
+      
+      if (filter !== "Filter by Region") state.data = newData;
+    },
+  },
   extraReducers: {
     [fetchData.pending]: (state) => {
       state.status = "pending";
@@ -28,6 +44,7 @@ export const countriesSlice = createSlice({
 
       state.status = "fulfilled";
       state.data = state.data.concat(payload);
+      state.dataSafeCopy = state.dataSafeCopy.concat(payload);
     },
     [fetchData.rejected]: (state, action) => {
       const { error } = action;
@@ -38,6 +55,6 @@ export const countriesSlice = createSlice({
   },
 });
 
-export const {  } = countriesSlice.actions;
+export const { filterBy } = countriesSlice.actions;
 
 export default countriesSlice.reducer;
