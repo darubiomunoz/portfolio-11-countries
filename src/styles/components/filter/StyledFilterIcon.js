@@ -4,8 +4,8 @@ import StyledIcon from '../header/StyledIcon';
 
 const StyledFilterIcon = styled(StyledIcon)`
   margin: 0;
-  background-color: ${props => props.theme.headerBackground};
-  color: ${props => props.theme.font};
+  background-color: ${props => props.theme.background1};
+  color: ${props => props.theme.text1};
 `;
 
 export default StyledFilterIcon;

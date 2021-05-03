@@ -12,6 +12,7 @@ const StyledFilterSection = styled(StyledSearchSection)`
   flex-direction: column;
   align-items: flex-start;
   gap: ${spacingExtraSmall};
+  background-color: ${(props) => props.theme.background2};
 `;
 
 export default StyledFilterSection;
