@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-size: 62.5%;
   font-family: ${fontFamily};
+  background-color: ${props => props.theme.background2};
 }
 `;
 
