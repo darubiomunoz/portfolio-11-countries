@@ -8,6 +8,7 @@ const StyledDetailsDiv = styled.div`
   margin-top: ${spacingExtraSmall};
   display: flex;
   gap: ${spacingExtraSmall};
+  background-color: ${(props) => props.theme.background1};
 `;
 
 export default StyledDetailsDiv;
