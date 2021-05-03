@@ -4,7 +4,8 @@ import {fontSizeSmall, fontWeightBold, fontWeightNormal  } from '../../Variables
 
 const StyledDetailSpan = styled.span`
   font-size: ${fontSizeSmall};
-  font-weight: ${props => props.bold ? fontWeightBold : fontWeightNormal};
+  font-weight: ${(props) => (props.bold ? fontWeightBold : fontWeightNormal)};
+  color: ${props => props.theme.text2};
 `;
 
 export default StyledDetailSpan;

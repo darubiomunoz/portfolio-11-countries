@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-import { colorOption5, borderRadiusExtraSmall,boxShadow } from '../../Variables';
+import { borderRadiusExtraSmall } from '../../Variables';
 
 const StyledCard = styled.div`
   width: 70%;
   height: fit-content;
-  background-color: ${colorOption5};
   border-radius: ${borderRadiusExtraSmall};
-  box-shadow: ${boxShadow};
+  background-color: ${props => props.theme.headerBackground};
+  box-shadow: ${props => props.theme.shadow};
 `;
 
 export default StyledCard;
