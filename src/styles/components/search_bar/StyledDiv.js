@@ -11,8 +11,8 @@ const StyledDiv = styled.div`
   padding: 0 ${spacingRegular};
   border: none;
   border-radius: ${borderRadiusExtraSmall};
-  background-color: ${props => props.theme.headerBackground};
-  color: ${props => props.theme.font};
+  background-color: ${props => props.theme.background1};
+  color: ${props => props.theme.text1};
   box-shadow: ${props => props.theme.shadow};
 `;
 

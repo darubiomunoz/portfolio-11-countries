@@ -10,6 +10,7 @@ const StyledSearchSection = styled.section`
   justify-content: center;
   padding: ${spacingRegular};
   padding-bottom: ${spacingNormal};
+  background-color: ${props => props.theme.background2};
 `;
 
 export default StyledSearchSection;
