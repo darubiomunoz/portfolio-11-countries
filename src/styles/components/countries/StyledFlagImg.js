@@ -7,6 +7,7 @@ const StyledFlagImg = styled.img`
   height: 100px;
   object-fit: cover;
   object-position: center;
+  border: none;
   border-top-left-radius: ${borderRadiusExtraSmall};
   border-top-right-radius: ${borderRadiusExtraSmall};
 `;

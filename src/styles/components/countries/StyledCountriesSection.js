@@ -10,6 +10,8 @@ const StyledCountriesSection = styled(StyledSearchSection)`
   flex-direction: column;
   align-items: center;
   gap: ${spacingNormal};
+  border: none;
+  background-color: ${props => props.theme.background2};
 `;
 
 export default StyledCountriesSection;

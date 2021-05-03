@@ -6,7 +6,7 @@ const StyledCard = styled.div`
   width: 70%;
   height: fit-content;
   border-radius: ${borderRadiusExtraSmall};
-  background-color: ${props => props.theme.headerBackground};
+  background-color: ${props => props.theme.background1};
   box-shadow: ${props => props.theme.shadow};
 `;
 

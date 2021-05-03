@@ -7,7 +7,8 @@ const StyledTitle = styled.h3`
   text-align: start;
   font-size: ${fontSizeNormal};
   font-weight: ${fontWeightExtraBold};
-  color: ${props => props.theme.font};
+  background-color: transparent;
+  color: ${(props) => props.theme.text1};
 `;
 
 export default StyledTitle;
