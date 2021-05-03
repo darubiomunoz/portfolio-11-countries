@@ -11,7 +11,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   box-shadow: ${props => props.theme.shadow};
-  background-color: ${props => props.theme.headerBackground};
+  background-color: ${props => props.theme.background1};
 `;
 
 export default StyledHeader;

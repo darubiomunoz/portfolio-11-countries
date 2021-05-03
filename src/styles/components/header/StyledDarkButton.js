@@ -9,7 +9,7 @@ const StyledDarkButton = styled.button`
   font-size: ${fontSizeSmall};
   font-weight: ${fontWeightNormal};
   background-color: transparent;
-  color: ${props => props.theme.font};
+  color: ${props => props.theme.text1};
 `;
 
 export default StyledDarkButton;

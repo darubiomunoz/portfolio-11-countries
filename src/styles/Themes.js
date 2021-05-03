@@ -1,15 +1,17 @@
 import { colorOption5, colorOption1, boxShadow, colorOption6, colorOption7, colorOption8, colorOption2, colorOption3, colorOption4 } from './Variables';
 
 export const light = {
-  headerBackground: colorOption5,
-  font: colorOption1,
+  background1: colorOption5,
+  background2: colorOption5,
+  text1: colorOption1,
   text2: colorOption1,
   shadow: boxShadow,
 };
 
 export const dark = {
-  headerBackground: colorOption1,
-  font: colorOption5,
+  background1: colorOption1,
+  background2: colorOption4,
+  text1: colorOption5,
   text2: colorOption4,
   shadow: '',
 };
