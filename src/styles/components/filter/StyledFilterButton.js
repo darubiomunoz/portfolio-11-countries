@@ -13,7 +13,7 @@ const StyledFilterButton = styled(StyledDarkButton)`
   font-size: ${fontSizeSmall};
   border-radius: ${borderRadiusExtraSmall};
   background-color: ${(props) => props.theme.background1};
-  color: ${(props) => props.theme.text1};
+  color: ${(props) => props.theme.text2};
   box-shadow: ${(props) => props.theme.shadow};
   cursor: pointer;
 `;
