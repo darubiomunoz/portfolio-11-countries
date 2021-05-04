@@ -1,4 +1,4 @@
-import { colorOption5, colorOption1, boxShadow, colorOption6, colorOption7, colorOption8, colorOption2, colorOption3, colorOption4 } from './Variables';
+import { colorOption1, colorOption2, colorOption4,colorOption5, boxShadow } from './Variables';
 
 export const light = {
   background1: colorOption5,
