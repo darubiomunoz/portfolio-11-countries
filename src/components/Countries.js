@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { nanoid } from "@reduxjs/toolkit";
@@ -9,9 +10,9 @@ import StyledCountriesSection from "../styles/components/countries/StyledCountri
 import StyledCard from "../styles/components/countries/StyledCard";
 import StyledFlagImg from "../styles/components/countries/StyledFlagImg";
 import StyledInfoArticle from "../styles/components/countries/StyledInfoArticle";
-import StyledTitle from '../styles/components/countries/StyledTitle';
-import StyledDetailsDiv from '../styles/components/countries/StyledDetailsDiv';
-import StyledDetailSpan from '../styles/components/countries/StyledDetailSpan';
+import StyledTitle from "../styles/components/countries/StyledTitle";
+import StyledDetailsDiv from "../styles/components/countries/StyledDetailsDiv";
+import StyledDetailSpan from "../styles/components/countries/StyledDetailSpan";
 
 const Countries = () => {
   const dispatch = useDispatch();
@@ -39,32 +40,36 @@ const Countries = () => {
   return (
     <StyledCountriesSection>
       {countriesStatus !== "fulfilled" && <StyledTitle>Loading...</StyledTitle>}
-      {countries.length === 0 && <StyledTitle>Country not found...</StyledTitle>}
+      {countries.length === 0 && (
+        <StyledTitle>Country not found...</StyledTitle>
+      )}
       {countries.map((country) => {
         return (
           <StyledCard key={nanoid()}>
-            <StyledFlagImg
-              src={country.flag}
-              alt={`Official flag of ${country.name}`}
-              loading="lazy"
-            />
-            <StyledInfoArticle>
-              <StyledTitle>{country.name}</StyledTitle>
-              <StyledDetailsDiv>
-                <StyledDetailSpan bold>Population:</StyledDetailSpan>
-                <StyledDetailSpan>
-                  {formatNumber(country.population)}
-                </StyledDetailSpan>
-              </StyledDetailsDiv>
-              <StyledDetailsDiv>
-                <StyledDetailSpan bold>Region:</StyledDetailSpan>
-                <StyledDetailSpan>{country.region}</StyledDetailSpan>
-              </StyledDetailsDiv>
-              <StyledDetailsDiv>
-                <StyledDetailSpan bold>Capital:</StyledDetailSpan>
-                <StyledDetailSpan>{country.capital}</StyledDetailSpan>
-              </StyledDetailsDiv>
-            </StyledInfoArticle>
+            <Link to={`/country/${country.alpha3Code}`}>
+              <StyledFlagImg
+                src={country.flag}
+                alt={`Official flag of ${country.name}`}
+                loading="lazy"
+              />
+              <StyledInfoArticle>
+                <StyledTitle>{country.name}</StyledTitle>
+                <StyledDetailsDiv>
+                  <StyledDetailSpan bold>Population:</StyledDetailSpan>
+                  <StyledDetailSpan>
+                    {formatNumber(country.population)}
+                  </StyledDetailSpan>
+                </StyledDetailsDiv>
+                <StyledDetailsDiv>
+                  <StyledDetailSpan bold>Region:</StyledDetailSpan>
+                  <StyledDetailSpan>{country.region}</StyledDetailSpan>
+                </StyledDetailsDiv>
+                <StyledDetailsDiv>
+                  <StyledDetailSpan bold>Capital:</StyledDetailSpan>
+                  <StyledDetailSpan>{country.capital}</StyledDetailSpan>
+                </StyledDetailsDiv>
+              </StyledInfoArticle>
+            </Link>
           </StyledCard>
         );
       })}
