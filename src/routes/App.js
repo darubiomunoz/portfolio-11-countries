@@ -19,7 +19,7 @@ const App = () => {
       <ThemeProvider theme={theme === 'light' ? light : dark}>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/country/id:" component={Country} />
+          <Route exact path="/country/:name" component={Country} />
           <Route component={NotFound} />
         </Switch>
         <GlobalStyle />
