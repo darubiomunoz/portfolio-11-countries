@@ -1,10 +1,11 @@
 import Header from '../components/Header';
+import BackButton from '../components/BackButton';
 
 const Country = () => {
   return (
     <>
       <Header />
-      <h1>Country</h1>
+      <BackButton />
     </>
   );
 }
