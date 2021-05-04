@@ -5,6 +5,7 @@ import { fontSizeSmall, spacingExtraSmall } from '../../Variables';
 const StyledIcon = styled.i`
   margin-right: ${spacingExtraSmall};
   font-size: ${fontSizeSmall};
+  background: transparent;
   color: ${props => props.theme.text1};
 `;
 

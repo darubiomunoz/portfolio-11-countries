@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   font-size: 62.5%;
   font-family: ${fontFamily};
   background-color: ${props => props.theme.background2};
+  text-decoration: none;
 }
 `;
 

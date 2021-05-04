@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 
 import StyledButtonSection from "../styles/components/back_button/StyledButtonSection";
+import StyledBackButton from "../styles/components/back_button/StyledBackButton";
+import StyledIcon from '../styles/components/header/StyledIcon';
 
 const BackButton = () => {
   return (
     <StyledButtonSection>
       <Link to="/">
-        <h1>button</h1>
+        <StyledBackButton>
+          <StyledIcon className="fas fa-long-arrow-alt-left" />
+          Back
+        </StyledBackButton>
       </Link>
     </StyledButtonSection>
   );
