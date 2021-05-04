@@ -6,6 +6,7 @@ const StyledLabel = styled.label`
   width: 100%;
   text-align: start;
   font-size: ${fontSizeSmall};
+  background-color: transparent;
   color: ${props => props.theme.text2};
   cursor: pointer;
 `;

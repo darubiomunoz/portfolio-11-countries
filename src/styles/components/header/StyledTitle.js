@@ -7,6 +7,7 @@ const StyledTitle = styled.h1`
   height: fit-content;
   font-size: ${fontSizeSmall};
   font-weight: ${fontWeightExtraBold};
+  background: transparent;
   color: ${props => props.theme.text1};
 `;
 
