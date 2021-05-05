@@ -35,38 +35,38 @@ const Information = () => {
           <StyledInfoParagraph>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Native Name:</StyledDetailSpan>
-              <StyledDetailSpan>{country.nativeName}</StyledDetailSpan>
+              <StyledDetailSpan>{country.nativeName === '' ? 'No Data' : country.nativeName}</StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Population:</StyledDetailSpan>
-              <StyledDetailSpan>{formatNumber(country.population)}</StyledDetailSpan>
+              <StyledDetailSpan>{country.population === '' ? 'No Data' : formatNumber(country.population)}</StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Region:</StyledDetailSpan>
-              <StyledDetailSpan>{country.region}</StyledDetailSpan>
+              <StyledDetailSpan>{country.region === '' ? 'No Data' : country.region}</StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Sub-Region:</StyledDetailSpan>
-              <StyledDetailSpan>{country.subregion}</StyledDetailSpan>
+              <StyledDetailSpan>{country.subregion === '' ? 'No Data' : country.region}</StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Capital:</StyledDetailSpan>
-              <StyledDetailSpan>{country.capital}</StyledDetailSpan>
+              <StyledDetailSpan>{country.capital === '' ? 'No Data' : country.capital}</StyledDetailSpan>
             </StyledDetailsDiv>
           </StyledInfoParagraph>
           <StyledInfoParagraph>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Top Level Domain:</StyledDetailSpan>
-              <StyledDetailSpan>{country.topLevelDomain}</StyledDetailSpan>
+              <StyledDetailSpan>{country.topLevelDomain === '' ? 'No Data' : country.topLevelDomain}</StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Currencies:</StyledDetailSpan>
-              <StyledDetailSpan>{country.currencies[0].name}</StyledDetailSpan>
+              <StyledDetailSpan>{country.currencies[0].name === '' ? 'No Data' : country.currencies[0].name}</StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Language(s):</StyledDetailSpan>
               <StyledDetailSpan>
-                {country.languages.map((language) => ` ${language.name},`)}
+                {country.languages.length === 0 ? 'No Data' : country.languages.map((language) => ` ${language.name},`)}
               </StyledDetailSpan>
             </StyledDetailsDiv>
           </StyledInfoParagraph>
@@ -74,7 +74,7 @@ const Information = () => {
             <StyledDetailsDiv column>
               <StyledDetailSpan bold>Border Countries:</StyledDetailSpan>
               <StyledDetailsDiv>
-                {country.borders.map((code) => {
+                {country.borders.length === 0 ? <StyledDetailSpan>{`${country.name} does not share borders with any country.`}</StyledDetailSpan> : country.borders.map((code) => {
                   return (
                     <Link to={`/country/${code}`} key={nanoid()}>
                       <StyledBackButton big>
