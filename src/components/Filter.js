@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import StyledFilterSection from "../styles/components/filter/StyledFilterSection";
@@ -17,6 +17,8 @@ const Filter = () => {
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.filter);
   const search = useSelector(state => state.search);
+  const dropDownMenu = useRef();
+  const dropDownButton = useRef();
 
   const handleClick = () => {
     setOpen(!open);
@@ -34,15 +36,25 @@ const Filter = () => {
     dispatch(filterBy({ filter }));
   }, [filter]);
 
+  useEffect(() => {
+    let handleClickOutside = (event) => {
+      if(!dropDownMenu.current.contains(event.target) && !dropDownButton.current.contains(event.target)) setOpen(false);
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [])
+
 
 
   return (
     <StyledFilterSection>
-      <StyledFilterButton onClick={handleClick}>
+      <StyledFilterButton onClick={handleClick} ref={dropDownButton}>
         {filter}
         <StyledFilterIcon className={`fas fa-angle-${open ? "up" : "down"}`} />
       </StyledFilterButton>
-      <StyledFilterDiv invisible={open ? "" : "invisible"}>
+      <StyledFilterDiv invisible={open ? "" : "invisible"} ref={dropDownMenu}>
         {filter !== "Filter by Region" && (
           <>
             <StyledLabel

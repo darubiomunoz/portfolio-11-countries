@@ -18,7 +18,7 @@ const SearchBar = () => {
 
   const handleChange = () => {
     const search = input.current.value;
-    if(filter !== 'Filter by Region') dispatch(updateFilter({ category: 'Filter by Region' }))
+    if(filter !== 'Filter by Region') dispatch(updateFilter({ category: 'Filter by Region' }));
     dispatch(updateSearch({ search }));
   }
 
