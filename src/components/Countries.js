@@ -47,16 +47,16 @@ const Countries = () => {
                 <StyledDetailsDiv>
                   <StyledDetailSpan bold>Population:</StyledDetailSpan>
                   <StyledDetailSpan>
-                    {formatNumber(country.population)}
+                    {country.population === '' ? 'No Data' : formatNumber(country.population)}
                   </StyledDetailSpan>
                 </StyledDetailsDiv>
                 <StyledDetailsDiv>
                   <StyledDetailSpan bold>Region:</StyledDetailSpan>
-                  <StyledDetailSpan>{country.region}</StyledDetailSpan>
+                  <StyledDetailSpan>{country.region === '' ? 'No Data' : country.region}</StyledDetailSpan>
                 </StyledDetailsDiv>
                 <StyledDetailsDiv>
                   <StyledDetailSpan bold>Capital:</StyledDetailSpan>
-                  <StyledDetailSpan>{country.capital}</StyledDetailSpan>
+                  <StyledDetailSpan>{country.capital === '' ? 'No Data' : country.capital}</StyledDetailSpan>
                 </StyledDetailsDiv>
               </StyledInfoArticle>
             </Link>
