@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
+import useFormatNumber from '../hooks/useFormatNumber';
+
 import { nanoid } from "@reduxjs/toolkit";
 
 import { fetchData } from "../features/countries/countriesSlice";
@@ -19,23 +21,11 @@ const Countries = () => {
   const countries = useSelector((state) => state.countries.data);
   const countriesStatus = useSelector((state) => state.countries.status);
 
+  const formatNumber = useFormatNumber();
+
   useEffect(() => {
     if (countriesStatus === "idle") dispatch(fetchData());
   }, [countriesStatus, dispatch]);
-
-  const formatNumber = (string) => {
-    string += "";
-    var x = string.split(".");
-    var x1 = x[0];
-    var x2 = x.length > 1 ? `${"." + x[1]}` : "";
-    var regex = /(\d+)(\d{3})/;
-
-    while (regex.test(x1)) {
-      x1 = x1.replace(regex, "$1" + "," + "$2");
-    }
-
-    return x1 + x2;
-  };
 
   return (
     <StyledCountriesSection>
