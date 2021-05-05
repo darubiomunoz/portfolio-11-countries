@@ -8,13 +8,16 @@ import StyledInput from '../styles/components/search_bar/StyledInput';
 
 import { updateSearch } from '../features/search/searchSlice';
 import { searchBy } from '../features/countries/countriesSlice';
+import { updateFilter } from '../features/filter/filterSlice';
 
 const SearchBar = () => {
   const dispatch = useDispatch();
   const search = useSelector(state => state.search);
+  const filter = useSelector(state => state.filter);
 
   const handleChange = event => {
     const search = event.target.value;
+    if(filter !== 'Filter by Region') dispatch(updateFilter({ category: 'Filter by Region' }))
     dispatch(updateSearch({ search }));
   }
 
