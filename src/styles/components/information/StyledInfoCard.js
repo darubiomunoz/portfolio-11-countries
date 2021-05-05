@@ -7,6 +7,7 @@ import {  } from '../../Variables';
 const StyledInfoCard = styled(StyledCard)`
   width: 85%;
   padding-top: 0;
+  box-shadow: none;
 `;
 
 export default StyledInfoCard;

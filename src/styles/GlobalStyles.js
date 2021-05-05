@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
   background-color: ${props => props.theme.background2};
   text-decoration: none;
 }
+
+a {
+  width: fit-content;
+}
 `;
 
 export default GlobalStyle;

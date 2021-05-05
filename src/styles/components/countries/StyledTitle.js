@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { fontSizeNormal, fontWeightExtraBold, spacingSmall } from '../../Variables';
 
 const StyledTitle = styled.h3`
-  margin-bottom: ${spacingSmall};
+  margin-bottom: ${props => props.noMargin ? '0' : spacingSmall};
   text-align: start;
   font-size: ${fontSizeNormal};
   font-weight: ${fontWeightExtraBold};
