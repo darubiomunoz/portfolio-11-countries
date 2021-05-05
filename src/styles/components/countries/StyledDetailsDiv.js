@@ -10,7 +10,7 @@ const StyledDetailsDiv = styled.div`
   flex-direction: ${props => props.column ? 'column' : 'row'};
   flex-wrap: wrap;
   gap: ${spacingExtraSmall};
-  background-color: ${(props) => props.theme.background1};
+  background-color: transparent;
 `;
 
 export default StyledDetailsDiv;
