@@ -22,9 +22,6 @@ const Information = () => {
     state.countries.data.find((item) => item.alpha3Code === alphacode)
   );
   const formatNumber = useFormatNumber();
-  console.log(country);
-
-  console.log(formatNumber('3000000'));
 
   return (
     <StyledInfoSection>
@@ -42,7 +39,7 @@ const Information = () => {
             </StyledDetailsDiv>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Population:</StyledDetailSpan>
-              <StyledDetailSpan>{country.population}</StyledDetailSpan>
+              <StyledDetailSpan>{formatNumber(country.population)}</StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Region:</StyledDetailSpan>
