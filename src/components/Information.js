@@ -2,6 +2,8 @@ import { useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import { nanoid } from "@reduxjs/toolkit";
 
+import useFormatNumber from '../hooks/useFormatNumber';
+
 import StyledInfoSection from "../styles/components/information/StyledInfoSection";
 import StyledInfoCard from "../styles/components/information/StyledInfoCard";
 import StyledInfoFlagImg from "../styles/components/information/StyledInfoFlagImg";
@@ -19,7 +21,10 @@ const Information = () => {
   const country = useSelector((state) =>
     state.countries.data.find((item) => item.alpha3Code === alphacode)
   );
+  const formatNumber = useFormatNumber();
   console.log(country);
+
+  console.log(formatNumber('3000000'));
 
   return (
     <StyledInfoSection>
