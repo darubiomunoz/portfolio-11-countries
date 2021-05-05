@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import StyledSearchSection from '../styles/components/search_bar/StyledSearchSection';
@@ -14,22 +14,24 @@ const SearchBar = () => {
   const dispatch = useDispatch();
   const search = useSelector(state => state.search);
   const filter = useSelector(state => state.filter);
+  const input = useRef();
 
-  const handleChange = event => {
-    const search = event.target.value;
+  const handleChange = () => {
+    const search = input.current.value;
     if(filter !== 'Filter by Region') dispatch(updateFilter({ category: 'Filter by Region' }))
     dispatch(updateSearch({ search }));
   }
 
   useEffect(() => {
     dispatch(searchBy({ search }));
+    if(search === '') input.current.value = '';
   }, [search]);
 
   return (
     <StyledSearchSection>
       <StyledDiv>
         <StyledInputIcon className="fas fa-search" />
-        <StyledInput placeholder="Search for a country..." onChange={event => handleChange(event)} />
+        <StyledInput placeholder="Search for a country..." onChange={handleChange} ref={input}/>
       </StyledDiv>
     </StyledSearchSection>
   );

@@ -10,11 +10,13 @@ import StyledFilterIcon from "../styles/components/filter/StyledFilterIcon";
 
 import { updateFilter } from "../features/filter/filterSlice";
 import { filterBy } from "../features/countries/countriesSlice";
+import { updateSearch } from '../features/search/searchSlice';
 
 const Filter = () => {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.filter);
+  const search = useSelector(state => state.search);
 
   const handleClick = () => {
     setOpen(!open);
@@ -22,6 +24,8 @@ const Filter = () => {
 
   const handleFiltering = (event) => {
     const category = event.target.htmlFor;
+    console.log(search);
+    if(search !== '') dispatch(updateSearch({ search: '' }));
     dispatch(updateFilter({ category }));
     setOpen(!open);
   };
@@ -29,6 +33,8 @@ const Filter = () => {
   useEffect(() => {
     dispatch(filterBy({ filter }));
   }, [filter]);
+
+
 
   return (
     <StyledFilterSection>
