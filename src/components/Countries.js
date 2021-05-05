@@ -30,7 +30,7 @@ const Countries = () => {
   return (
     <StyledCountriesSection>
       {countriesStatus !== "fulfilled" && <StyledTitle>Loading...</StyledTitle>}
-      {countries.length === 0 && (
+      {(countries.length === 0 && countriesStatus === 'fulfilled') && (
         <StyledTitle>Country not found...</StyledTitle>
       )}
       {countries.map((country) => {
