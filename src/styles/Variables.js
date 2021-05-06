@@ -22,9 +22,23 @@ export const fontWeightNormal = `400`;
 export const fontWeightBold = `700`;
 export const fontWeightExtraBold = `900`;
 
-export const breakpointMobile = `375px`;
-export const breakpointTablet = `600px`;
-export const breakpointDesktop = `1024px`;
+export const breakpointWidth240 = `240px`;
+export const breakpointWidth280 = `280px`;
+export const breakpointWidth320 = `320px`;
+export const breakpointWidth360 = `360px`;
+export const breakpointWidth375 = `375px`;
+export const breakpointWidth384 = `384px`;
+export const breakpointWidth411 = `411px`;
+export const breakpointWidth412 = `412px`;
+export const breakpointWidth414 = `414px`;
+export const breakpointWidth480 = `480px`;
+export const breakpointWidth540 = `540px`;
+export const breakpointWidth600 = `600px`;
+export const breakpointWidth768 = `768px`;
+export const breakpointWidth800 = `800px`;
+export const breakpointWidth1024 = `1024px`;
+export const breakpointWidth1280 = `1280px`;
+export const breakpointWidth1440 = `1440px`;
 
 export const spacingExtraSmall = `5px`;
 export const spacingSmall = `10px`;
