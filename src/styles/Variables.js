@@ -40,6 +40,26 @@ export const breakpointWidth1024 = `(min-width: 1024px)`;
 export const breakpointWidth1280 = `(min-width: 1280px)`;
 export const breakpointWidth1440 = `(min-width: 1440px)`;
 
+export const device = {
+  width240: breakpointWidth240,
+  width280: breakpointWidth280,
+  width320: breakpointWidth320,
+  width360: breakpointWidth360,
+  width375: breakpointWidth375,
+  width384: breakpointWidth384,
+  width411: breakpointWidth411,
+  width412: breakpointWidth412,
+  width414: breakpointWidth414,
+  width480: breakpointWidth480,
+  width540: breakpointWidth540,
+  width600: breakpointWidth600,
+  width768: breakpointWidth768,
+  width800: breakpointWidth800,
+  width1024: breakpointWidth1024,
+  width1280: breakpointWidth1280,
+  width1440: breakpointWidth1440,
+};
+
 export const spacingExtraSmall = `5px`;
 export const spacingSmall = `10px`;
 export const spacingRegular = `20px`;
