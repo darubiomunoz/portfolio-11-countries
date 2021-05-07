@@ -48,7 +48,11 @@ const StyledFilterDiv = styled(StyledDiv)`
   }
 
   @media ${device.width480} {
-    width: 264px;
+    width: 252px;
+  }
+
+  @media ${device.width540} {
+    width: 288px;
   }
 `;
 
