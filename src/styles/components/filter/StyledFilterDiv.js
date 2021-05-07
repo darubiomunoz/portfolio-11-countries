@@ -22,6 +22,14 @@ const StyledFilterDiv = styled(StyledDiv)`
     width: 168px;
     padding: ${spacingSmall} ${spacingRegular};
   }
+
+  @media ${device.width360} {
+    width: 192px;
+  }
+
+  @media ${device.width384} {
+    width: 206.4px;
+  }
 `;
 
 export default StyledFilterDiv;

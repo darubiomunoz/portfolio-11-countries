@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacingSmall, device } from '../../Variables';
+import { spacingSmall, spacingRegular, device } from '../../Variables';
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -14,7 +14,8 @@ const StyledHeader = styled.header`
   background-color: ${props => props.theme.background1};
 
   @media ${device.width320} {
-    height: 75px;
+    height: 70px;
+    padding: ${spacingSmall} ${spacingRegular};
   }
 `;
 
