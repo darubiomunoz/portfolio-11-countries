@@ -64,8 +64,9 @@ export const spacingExtraSmall = `5px`;
 export const spacingSmall = `10px`;
 export const spacingRegular = `20px`;
 export const spacingNormal = `30px`;
-export const spacingLarge = `40px`;
-export const spacingExtraLarge = `50px`;
+export const spacingMedium = `40px`;
+export const spacingLarge = `50px`;
+export const spacingExtraLarge = `60px`;
 
 export const borderRadiusExtraSmall = `5px`;
 export const borderRadiusSmall = `10px`;

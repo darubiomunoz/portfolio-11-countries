@@ -10,12 +10,16 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: ${props => props.theme.shadow};
-  background-color: ${props => props.theme.background1};
+  box-shadow: ${(props) => props.theme.shadow};
+  background-color: ${(props) => props.theme.background1};
 
   @media ${device.width320} {
     height: 70px;
     padding: ${spacingSmall} ${spacingRegular};
+  }
+
+  @media ${device.width480} {
+    height: 85px;
   }
 `;
 
