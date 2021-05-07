@@ -1,8 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import StyledDarkButton from '../header/StyledDarkButton';
+import StyledDarkButton from "../header/StyledDarkButton";
 
-import { spacingSmall, fontSizeSmall, borderRadiusExtraSmall } from '../../Variables';
+import {
+  spacingSmall,
+  spacingRegular,
+  fontSizeSmall,
+  borderRadiusExtraSmall,
+  device,
+} from "../../Variables";
 
 const StyledFilterButton = styled(StyledDarkButton)`
   width: 65%;
@@ -16,6 +22,11 @@ const StyledFilterButton = styled(StyledDarkButton)`
   color: ${(props) => props.theme.text2};
   box-shadow: ${(props) => props.theme.shadow};
   cursor: pointer;
+
+  @media ${device.width320} {
+    width: 60%;
+    padding: ${spacingSmall} ${spacingRegular};
+  }
 `;
 
 export default StyledFilterButton;

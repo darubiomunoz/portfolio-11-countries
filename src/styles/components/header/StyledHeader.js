@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 
-import { spacingSmall } from '../../Variables';
+import { spacingSmall, device } from '../../Variables';
 
 const StyledHeader = styled.header`
   width: 100%;
   max-width: 100vw;
-  height: 15vh;
+  height: 50px;
   padding: 0 ${spacingSmall};
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: ${props => props.theme.shadow};
   background-color: ${props => props.theme.background1};
+
+  @media ${device.width320} {
+    height: 75px;
+  }
 `;
 
 export default StyledHeader;
