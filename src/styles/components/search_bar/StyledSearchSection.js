@@ -16,6 +16,12 @@ const StyledSearchSection = styled.section`
     padding: ${spacingNormal};
     padding-bottom: ${spacingMedium};
   }
+
+  @media ${device.width1280} {
+    width: 50%;
+    display: inline-flex;
+    justify-content: flex-start;
+  }
 `;
 
 export default StyledSearchSection;

@@ -12,6 +12,10 @@ const StyledCard = styled.div`
   @media ${device.width600} {
     width: 41%;
   }
+
+  @media ${device.width1280} {
+    width: 23%;
+  }
 `;
 
 export default StyledCard;

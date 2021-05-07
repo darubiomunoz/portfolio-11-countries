@@ -10,6 +10,7 @@ const StyledDarkButton = styled.button`
   font-weight: ${fontWeightNormal};
   background-color: transparent;
   color: ${(props) => props.theme.text1};
+  cursor: pointer;
 
   @media ${device.width411} {
     font-size: ${fontSizeRegular};

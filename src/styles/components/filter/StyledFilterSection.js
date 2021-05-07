@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import StyledSearchSection from '../search_bar/StyledSearchSection';
 
-import { spacingExtraSmall } from '../../Variables';
+import { spacingExtraSmall, spacingNormal, device } from '../../Variables';
 
 const StyledFilterSection = styled(StyledSearchSection)`
   width: 100%;
@@ -13,6 +13,12 @@ const StyledFilterSection = styled(StyledSearchSection)`
   align-items: flex-start;
   gap: ${spacingExtraSmall};
   background-color: ${(props) => props.theme.background2};
+
+  @media ${device.width1280} {
+    width: 50%;
+    padding-top: ${spacingNormal};
+    align-items: flex-end;
+  }
 `;
 
 export default StyledFilterSection;

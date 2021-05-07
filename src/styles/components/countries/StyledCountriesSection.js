@@ -17,6 +17,12 @@ const StyledCountriesSection = styled(StyledSearchSection)`
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @media ${device.width1280} {
+    width: 100%;
+    padding: ${spacingNormal};
+    justify-content: space-evenly;
+  }
 `;
 
 export default StyledCountriesSection;

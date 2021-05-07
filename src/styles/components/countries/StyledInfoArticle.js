@@ -12,6 +12,10 @@ const StyledInfoArticle = styled.article`
   @media ${device.width411} {
     padding: ${spacingNormal} ${spacingRegular};
   }
+
+  @media ${device.width1280} {
+    min-height: 252px;
+  }
 `;
 
 export default StyledInfoArticle;
