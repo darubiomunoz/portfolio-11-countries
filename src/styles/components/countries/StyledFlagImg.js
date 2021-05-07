@@ -12,7 +12,7 @@ const StyledFlagImg = styled.img`
   border-top-right-radius: ${borderRadiusExtraSmall};
 
   @media ${device.width600} {
-    height: 150px;
+    height: 175px;
   }
 `;
 

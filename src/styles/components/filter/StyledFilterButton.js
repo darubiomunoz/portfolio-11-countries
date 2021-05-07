@@ -36,6 +36,10 @@ const StyledFilterButton = styled(StyledDarkButton)`
   @media ${device.width768} {
     width: 50%;
   }
+
+  @media ${device.width1024} {
+    width: 40%;
+  }
 `;
 
 export default StyledFilterButton;
