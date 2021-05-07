@@ -5,6 +5,8 @@ import {
   spacingSmall,
   borderRadiusExtraSmall,
   fontSizeSmall,
+  device,
+  fontSizeRegular
 } from "../../Variables";
 
 const StyledBackButton = styled.button`
@@ -21,6 +23,10 @@ const StyledBackButton = styled.button`
   font-size: ${fontSizeSmall};
   color: ${(props) => props.theme.text1};
   box-shadow: ${(props) => props.theme.shadow};
+
+  @media ${device.width411} {
+    font-size: ${fontSizeRegular};
+  }
 `;
 
 export default StyledBackButton;
