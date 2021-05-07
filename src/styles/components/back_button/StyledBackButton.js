@@ -27,6 +27,10 @@ const StyledBackButton = styled.button`
   @media ${device.width411} {
     font-size: ${fontSizeRegular};
   }
+
+  @media ${device.width1024} {
+    width: 22%;
+  }
 `;
 
 export default StyledBackButton;
