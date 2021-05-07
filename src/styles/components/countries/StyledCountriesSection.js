@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import StyledSearchSection from "../search_bar/StyledSearchSection";
 
-import { spacingNormal } from "../../Variables";
+import { spacingNormal, device } from "../../Variables";
 
 const StyledCountriesSection = styled(StyledSearchSection)`
   padding: 0;
@@ -12,6 +12,11 @@ const StyledCountriesSection = styled(StyledSearchSection)`
   gap: ${spacingNormal};
   border: none;
   background-color: ${props => props.theme.background2};
+
+  @media ${device.width600} {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export default StyledCountriesSection;

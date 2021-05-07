@@ -10,6 +10,10 @@ const StyledFlagImg = styled.img`
   border: none;
   border-top-left-radius: ${borderRadiusExtraSmall};
   border-top-right-radius: ${borderRadiusExtraSmall};
+
+  @media ${device.width600} {
+    height: 150px;
+  }
 `;
 
 export default StyledFlagImg;
