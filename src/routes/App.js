@@ -9,7 +9,6 @@ import { light, dark } from '../styles/Themes';
 
 import HomePage from "../pages/HomePage";
 import Country from "../pages/Country";
-import NotFound from "../pages/NotFound";
 
 const App = () => {
   const theme = useSelector(state => state.theme);
@@ -20,7 +19,6 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/country/:alphacode" component={Country} />
-          <Route component={NotFound} />
         </Switch>
         <GlobalStyle />
       </ThemeProvider>
