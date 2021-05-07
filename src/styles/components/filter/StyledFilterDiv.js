@@ -27,6 +27,10 @@ const StyledFilterDiv = styled(StyledDiv)`
     width: 192px;
   }
 
+  @media ${device.width375} {
+    width: 201.2px;
+  }
+
   @media ${device.width384} {
     width: 206.4px;
   }
