@@ -34,6 +34,10 @@ const StyledFilterDiv = styled(StyledDiv)`
   @media ${device.width384} {
     width: 206.4px;
   }
+
+  @media ${device.width411} {
+    width: 222.79px;
+  }
 `;
 
 export default StyledFilterDiv;

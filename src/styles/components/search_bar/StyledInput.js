@@ -4,7 +4,9 @@ import {
   spacingRegular,
   spacingExtraSmall,
   borderRadiusExtraSmall,
-  fontSizeSmall
+  fontSizeSmall,
+  fontSizeRegular,
+  device
 } from "../../Variables";
 
 const StyledInput = styled.input`
@@ -15,8 +17,12 @@ const StyledInput = styled.input`
   border: none;
   border-radius: ${borderRadiusExtraSmall};
   font-size: ${fontSizeSmall};
-  background-color: ${props => props.theme.background1};
-  color: ${props => props.theme.text1};
+  background-color: ${(props) => props.theme.background1};
+  color: ${(props) => props.theme.text1};
+
+  @media ${device.width411} {
+    font-size: ${fontSizeRegular};
+  }
 `;
 
 export default StyledInput;

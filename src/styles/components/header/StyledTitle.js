@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { fontSizeSmall, fontWeightExtraBold } from '../../Variables';
+import { fontSizeSmall, fontSizeRegular, fontWeightExtraBold, device } from '../../Variables';
 
 const StyledTitle = styled.h1`
   width: fit-content;
@@ -9,6 +9,10 @@ const StyledTitle = styled.h1`
   font-weight: ${fontWeightExtraBold};
   background: transparent;
   color: ${props => props.theme.text1};
+
+  @media ${device.width411} {
+    font-size: ${fontSizeRegular};
+  }
 `;
 
 export default StyledTitle;

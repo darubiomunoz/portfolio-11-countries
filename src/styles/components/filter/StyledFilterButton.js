@@ -6,6 +6,7 @@ import {
   spacingSmall,
   spacingRegular,
   fontSizeSmall,
+  fontSizeRegular,
   borderRadiusExtraSmall,
   device,
 } from "../../Variables";
@@ -26,6 +27,10 @@ const StyledFilterButton = styled(StyledDarkButton)`
   @media ${device.width320} {
     width: 60%;
     padding: ${spacingSmall} ${spacingRegular};
+  }
+
+  @media ${device.width411} {
+    font-size: ${fontSizeRegular};
   }
 `;
 
