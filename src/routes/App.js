@@ -14,10 +14,10 @@ const App = () => {
   const theme = useSelector(state => state.theme);
 
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme === 'light' ? light : dark}>
+    <BrowserRouter basename="/portfolio-11-countries">
+      <ThemeProvider theme={theme === "light" ? light : dark}>
         <Switch>
-          <Route exact path="/portfolio-11-countries" component={HomePage} />
+          <Route exact path="/" component={HomePage} />
           <Route exact path="/country/:alphacode" component={Country} />
         </Switch>
         <GlobalStyle />
