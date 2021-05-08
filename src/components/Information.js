@@ -19,7 +19,7 @@ import StyledBackButton from "../styles/components/back_button/StyledBackButton"
 const Information = () => {
   const { alphacode } = useParams();
   const country = useSelector((state) =>
-    state.countries.data.find((item) => item.alpha3Code === alphacode)
+    state.countries.dataSafeCopy.find((item) => item.alpha3Code === alphacode)
   );
   const formatNumber = useFormatNumber();
 
