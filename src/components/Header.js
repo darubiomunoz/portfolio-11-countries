@@ -15,7 +15,7 @@ const Header = () => {
 
   return ( 
     <StyledHeader>
-      <StyledTitle>Where in the world?</StyledTitle>
+      <StyledTitle tabIndex="0">Where in the world?</StyledTitle>
       <StyledDarkButton onClick={handleClick}>
         <StyledIcon className={`far fa-${theme === 'light' ? 'moon' : 'sun'}`} />
         {`${theme === 'light' ? 'Dark' : 'Light'} Mode`}

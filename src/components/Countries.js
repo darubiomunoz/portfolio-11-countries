@@ -41,22 +41,35 @@ const Countries = () => {
                 src={country.flag}
                 alt={`Official flag of ${country.name}`}
                 loading="lazy"
+                tabIndex="0"
               />
               <StyledInfoArticle>
-                <StyledTitle>{country.name}</StyledTitle>
+                <StyledTitle tabIndex="0">{country.name}</StyledTitle>
                 <StyledDetailsDiv>
-                  <StyledDetailSpan bold>Population:</StyledDetailSpan>
-                  <StyledDetailSpan>
-                    {country.population === '' ? 'No Data' : formatNumber(country.population)}
+                  <StyledDetailSpan bold tabIndex="0">
+                    Population:
+                  </StyledDetailSpan>
+                  <StyledDetailSpan tabIndex="0">
+                    {country.population === ""
+                      ? "No Data"
+                      : formatNumber(country.population)}
                   </StyledDetailSpan>
                 </StyledDetailsDiv>
                 <StyledDetailsDiv>
-                  <StyledDetailSpan bold>Region:</StyledDetailSpan>
-                  <StyledDetailSpan>{country.region === '' ? 'No Data' : country.region}</StyledDetailSpan>
+                  <StyledDetailSpan bold tabIndex="0">
+                    Region:
+                  </StyledDetailSpan>
+                  <StyledDetailSpan tabIndex="0">
+                    {country.region === "" ? "No Data" : country.region}
+                  </StyledDetailSpan>
                 </StyledDetailsDiv>
                 <StyledDetailsDiv>
-                  <StyledDetailSpan bold>Capital:</StyledDetailSpan>
-                  <StyledDetailSpan>{country.capital === '' ? 'No Data' : country.capital}</StyledDetailSpan>
+                  <StyledDetailSpan bold tabIndex="0">
+                    Capital:
+                  </StyledDetailSpan>
+                  <StyledDetailSpan tabIndex="0">
+                    {country.capital === "" ? "No Data" : country.capital}
+                  </StyledDetailSpan>
                 </StyledDetailsDiv>
               </StyledInfoArticle>
             </Link>

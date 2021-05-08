@@ -54,12 +54,17 @@ const Filter = () => {
         {filter}
         <StyledFilterIcon className={`fas fa-angle-${open ? "up" : "down"}`} />
       </StyledFilterButton>
-      <StyledFilterDiv invisible={open ? "" : "invisible"} ref={dropDownMenu}>
+      <StyledFilterDiv
+        invisible={open ? "" : "invisible"}
+        ref={dropDownMenu}
+        tabIndex={open ? "0" : ""}
+      >
         {filter !== "Filter by Region" && (
           <>
             <StyledLabel
               htmlFor="Filter by Region"
               onClick={(event) => handleFiltering(event)}
+              tabIndex={open ? "0" : ""}
             >
               Filter by Region
             </StyledLabel>
@@ -74,6 +79,7 @@ const Filter = () => {
         <StyledLabel
           htmlFor="Africa"
           onClick={(event) => handleFiltering(event)}
+          tabIndex={open ? "0" : ""}
         >
           Africa
         </StyledLabel>
@@ -83,7 +89,11 @@ const Filter = () => {
           name="category"
           type="radio"
         />
-        <StyledLabel htmlFor="America" onClick={handleFiltering}>
+        <StyledLabel
+          htmlFor="America"
+          onClick={handleFiltering}
+          tabIndex={open ? "0" : ""}
+        >
           America
         </StyledLabel>
         <StyledRadioInput
@@ -92,11 +102,19 @@ const Filter = () => {
           name="category"
           type="radio"
         />
-        <StyledLabel htmlFor="Asia" onClick={handleFiltering}>
+        <StyledLabel
+          htmlFor="Asia"
+          onClick={handleFiltering}
+          tabIndex={open ? "0" : ""}
+        >
           Asia
         </StyledLabel>
         <StyledRadioInput id="Asia" value="Asia" name="category" type="radio" />
-        <StyledLabel htmlFor="Europe" onClick={handleFiltering}>
+        <StyledLabel
+          htmlFor="Europe"
+          onClick={handleFiltering}
+          tabIndex={open ? "0" : ""}
+        >
           Europe
         </StyledLabel>
         <StyledRadioInput
@@ -105,7 +123,11 @@ const Filter = () => {
           name="category"
           type="radio"
         />
-        <StyledLabel htmlFor="Oceania" onClick={handleFiltering}>
+        <StyledLabel
+          htmlFor="Oceania"
+          onClick={handleFiltering}
+          tabIndex={open ? "0" : ""}
+        >
           Oceania
         </StyledLabel>
         <StyledRadioInput

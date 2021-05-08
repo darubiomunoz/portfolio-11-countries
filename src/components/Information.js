@@ -29,60 +29,105 @@ const Information = () => {
         <StyledInfoFlagImg
           src={country.flag}
           alt={`Official flag of ${country.name}`}
+          tabIndex="0"
         />
         <StyledArticle>
-          <StyledTitle noMargin>{country.name}</StyledTitle>
+          <StyledTitle noMargin tabIndex="0">
+            {country.name}
+          </StyledTitle>
           <StyledInfoParagraph half>
             <StyledDetailsDiv>
-              <StyledDetailSpan bold>Native Name:</StyledDetailSpan>
-              <StyledDetailSpan>{country.nativeName === '' ? 'No Data' : country.nativeName}</StyledDetailSpan>
+              <StyledDetailSpan bold tabIndex="0">
+                Native Name:
+              </StyledDetailSpan>
+              <StyledDetailSpan tabIndex="0">
+                {country.nativeName === "" ? "No Data" : country.nativeName}
+              </StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
-              <StyledDetailSpan bold>Population:</StyledDetailSpan>
-              <StyledDetailSpan>{country.population === '' ? 'No Data' : formatNumber(country.population)}</StyledDetailSpan>
+              <StyledDetailSpan bold tabIndex="0">
+                Population:
+              </StyledDetailSpan>
+              <StyledDetailSpan tabIndex="0">
+                {country.population === ""
+                  ? "No Data"
+                  : formatNumber(country.population)}
+              </StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
-              <StyledDetailSpan bold>Region:</StyledDetailSpan>
-              <StyledDetailSpan>{country.region === '' ? 'No Data' : country.region}</StyledDetailSpan>
+              <StyledDetailSpan bold tabIndex="0">
+                Region:
+              </StyledDetailSpan>
+              <StyledDetailSpan tabIndex="0">
+                {country.region === "" ? "No Data" : country.region}
+              </StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
-              <StyledDetailSpan bold>Sub-Region:</StyledDetailSpan>
-              <StyledDetailSpan>{country.subregion === '' ? 'No Data' : country.region}</StyledDetailSpan>
+              <StyledDetailSpan bold tabIndex="0">
+                Sub-Region:
+              </StyledDetailSpan>
+              <StyledDetailSpan tabIndex="0">
+                {country.subregion === "" ? "No Data" : country.region}
+              </StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
-              <StyledDetailSpan bold>Capital:</StyledDetailSpan>
-              <StyledDetailSpan>{country.capital === '' ? 'No Data' : country.capital}</StyledDetailSpan>
+              <StyledDetailSpan bold tabIndex="0">
+                Capital:
+              </StyledDetailSpan>
+              <StyledDetailSpan tabIndex="0">
+                {country.capital === "" ? "No Data" : country.capital}
+              </StyledDetailSpan>
             </StyledDetailsDiv>
           </StyledInfoParagraph>
           <StyledInfoParagraph half>
             <StyledDetailsDiv>
-              <StyledDetailSpan bold>Top Level Domain:</StyledDetailSpan>
-              <StyledDetailSpan>{country.topLevelDomain === '' ? 'No Data' : country.topLevelDomain}</StyledDetailSpan>
+              <StyledDetailSpan bold tabIndex="0">
+                Top Level Domain:
+              </StyledDetailSpan>
+              <StyledDetailSpan tabIndex="0">
+                {country.topLevelDomain === ""
+                  ? "No Data"
+                  : country.topLevelDomain}
+              </StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
-              <StyledDetailSpan bold>Currencies:</StyledDetailSpan>
-              <StyledDetailSpan>{country.currencies[0].name === '' ? 'No Data' : country.currencies[0].name}</StyledDetailSpan>
+              <StyledDetailSpan bold tabIndex="0">
+                Currencies:
+              </StyledDetailSpan>
+              <StyledDetailSpan tabIndex="0">
+                {country.currencies[0].name === ""
+                  ? "No Data"
+                  : country.currencies[0].name}
+              </StyledDetailSpan>
             </StyledDetailsDiv>
             <StyledDetailsDiv>
-              <StyledDetailSpan bold>Language(s):</StyledDetailSpan>
-              <StyledDetailSpan>
-                {country.languages.length === 0 ? 'No Data' : country.languages.map((language) => ` ${language.name},`)}
+              <StyledDetailSpan bold tabIndex="0">
+                Language(s):
+              </StyledDetailSpan>
+              <StyledDetailSpan tabIndex="0">
+                {country.languages.length === 0
+                  ? "No Data"
+                  : country.languages.map((language) => ` ${language.name},`)}
               </StyledDetailSpan>
             </StyledDetailsDiv>
           </StyledInfoParagraph>
           <StyledInfoParagraph>
             <StyledDetailsDiv column>
-              <StyledDetailSpan bold>Border Countries:</StyledDetailSpan>
-              <StyledDetailsDiv>
-                {country.borders.length === 0 ? <StyledDetailSpan>{`${country.name} does not share borders with any country.`}</StyledDetailSpan> : country.borders.map((code) => {
-                  return (
-                    <Link to={`/country/${code}`} key={nanoid()}>
-                      <StyledBackButton big>
-                        {code}
-                      </StyledBackButton>
-                    </Link>
-                  );
-                })}
+              <StyledDetailSpan bold tabIndex="0">
+                Border Countries:
+              </StyledDetailSpan>
+              <StyledDetailsDiv tabIndex="0">
+                {country.borders.length === 0 ? (
+                  <StyledDetailSpan>{`${country.name} does not share borders with any country.`}</StyledDetailSpan>
+                ) : (
+                  country.borders.map((code) => {
+                    return (
+                      <Link to={`/country/${code}`} key={nanoid()}>
+                        <StyledBackButton big>{code}</StyledBackButton>
+                      </Link>
+                    );
+                  })
+                )}
               </StyledDetailsDiv>
             </StyledDetailsDiv>
           </StyledInfoParagraph>
