@@ -9,6 +9,7 @@ const StyledInfoCard = styled(StyledCard)`
   padding-top: 0;
   background-color: transparent;
   box-shadow: none;
+  cursor: unset;
 
   @media ${device.width1280} {
     display: flex;
