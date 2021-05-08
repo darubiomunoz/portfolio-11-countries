@@ -5,7 +5,6 @@ export default function useFindName() {
   
   const findName = code => {
     const country = countries.find(country => country.alpha3Code === code);
-    console.log(code);
     return country.name;
   };
 
