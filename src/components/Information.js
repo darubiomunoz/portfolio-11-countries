@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { nanoid } from "@reduxjs/toolkit";
 
 import useFormatNumber from '../hooks/useFormatNumber';
+import useFindName from '../hooks/useFindName';
 
 import StyledInfoSection from "../styles/components/information/StyledInfoSection";
 import StyledInfoCard from "../styles/components/information/StyledInfoCard";
@@ -22,6 +23,7 @@ const Information = () => {
     state.countries.dataSafeCopy.find((item) => item.alpha3Code === alphacode)
   );
   const formatNumber = useFormatNumber();
+  const findName = useFindName();
 
   return (
     <StyledInfoSection>
@@ -123,7 +125,7 @@ const Information = () => {
                   country.borders.map((code) => {
                     return (
                       <Link to={`/country/${code}`} key={nanoid()}>
-                        <StyledBackButton big>{code}</StyledBackButton>
+                        <StyledBackButton big>{findName(code)}</StyledBackButton>
                       </Link>
                     );
                   })
