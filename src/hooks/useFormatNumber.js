@@ -1,5 +1,5 @@
 
-export default function useformatNumber() {
+export default function useFormatNumber() {
   const formatNumber = (string) => {
     string += "";
     var x = string.split(".");

@@ -18,7 +18,7 @@ Project Link: [https://darubiomunoz.github.io/portfolio-11-countries](https://da
   </p>
 </p>
 
-<!-- TABLE OF CONTENTS -->
+<!-- TABLE OF CONTENTS --> 
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -67,7 +67,7 @@ This component is developed with:
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) _version: 3_
 * [Styled Components](https://styled-components.com/) _version: 5.2.3_
 * [React](https://reactjs.org/) _version: 17.0.1_
-* [React-React-App](https://create-react-app.dev/) _version: 4.0.3_
+* [Creact-React-App](https://create-react-app.dev/) _version: 4.0.3_
 * [React DOM](https://reactjs.org/docs/react-dom.html) _version: 17.0.1_
 * [React Scripts](https://create-react-app.dev/docs/available-scripts/) _version: 4.0.3_
 * [Redux](https://redux.js.org/) _version: 4.0.5_
@@ -135,7 +135,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- Status -->
 ## 5. Status :memo:
 
-The project is `Under Development`.
+The project is `Finished`.
 
 <!-- WHAT I LEARNED -->
 <!--
@@ -143,64 +143,55 @@ Use this section to recap over some of your major learnings while working throug
  -->
 ## 6. What I learned :mortar_board:
 
-This section will be filled at the end of the project.
+It was a very challenging project, now that I've finished the code I can say that I encountered **many problems** on the development process like a very small start because I had to research, **read documentation**, and make a lot of mistakes with the **styled components** because I knew nothing about them when I started coding.
 
-<!-- Well, as I expected, implementing Redux by myself for the first time was really confusing even when a made a course about **Redux**. I spend so much time trying to learn about Redux and its environment, the learning curve it's actually quite long because it isn't only Redux if not **React Redux**, **Redux Toolkit**, and **Redux Thunk** that I didn't used in this project but I will in the next personal project so that I dive more into the understand of Redux.
+Also, when I was coding the redux logic I had to modify the state in an object with multiple levels and I struggle to find the correct way but as always, reading documentation helped find the correct way to do it using **Redux toolkit**, and I implemented the middleware, the **Redux Thunk**, to call the API I wasn't to difficult I just followed the documentation of **Redux**.
 
-**I struggle a lot using Redux toolkit** at first, but later in the project I found the biggest wall that was **writing the reducer functions** inside of the store's slices to filter the list of job offers by categories. I was able to find a way to finish the reducer function by **reading much of the Redux and Redux Toolkit documentation**, **reading some articles** I found on the internet, and **searching on google a lot**.
+Finally, I used many **hooks** and I created my own **custom hook** to format numbers called useFormatNumber.
 
 These are some fractions of code where I struggled and came up with solutions.
 
 ```
-  const initialState = {
-    isActive: false,
-    roles: [],
-    levels: [],
-    languages: [],
-    tools: [],
+  export default function useformatNumber() {
+    const formatNumber = (string) => {
+      string += "";
+      var x = string.split(".");
+      var x1 = x[0];
+      var x2 = x.length > 1 ? `${"." + x[1]}` : "";
+      var regex = /(\d+)(\d{3})/;
+
+      while (regex.test(x1)) {
+        x1 = x1.replace(regex, "$1" + "," + "$2");
+      }
+
+      return x1 + x2;
+    };
+
+    return formatNumber;
   };
 ```
 
 ```
-  filterByRoles: (state, action) => {
-      const { roles } = action.payload;
-      
-      if (roles.length > 0) return state.filter((joboffer) => roles.includes(joboffer.role));
-    },
-    filterByLevels: (state, action) => {
-      const { levels } = action.payload;
-
-      if (levels.length > 0) return state.filter((joboffer) => levels.includes(joboffer.level));
-    },
-    filterByLanguages: (state, action) => {
-      const { languages } = action.payload;
-
-      if (languages.length > 0) return state.filter(joboffer => languages.every(item => joboffer.languages.includes(item)));
-    },
-    filterByTools: (state, action) => {
-      const { tools } = action.payload;
-
-      if (tools.length > 0) return state.filter(joboffer => tools.every(item => joboffer.tools.includes(item)));
-    }
-  }
-```
-
-```
-  const handleDeleteFilter = (event) => {
-    const category = event.target.parentNode.firstChild.firstChild.data;
-
-    dispatch(deleteCategory({ category }));
-
-    dispatch(noFiltersApplied());
-
-    if (!roles.includes(category) && roles.length > 0) dispatch(filterByRoles({ roles }));
-    if (!levels.includes(category) && levels.length > 0) dispatch(filterByLevels({ levels }));
-    if (!languages.includes(category) && languages.length > 0)
-      dispatch(filterByLanguages({ languages }));
-    if (!tools.includes(category) && tools.length > 0)
-      dispatch(filterByTools({ tools }));
+  export const light = {
+    background1: colorOption5,
+    background2: '',
+    text1: colorOption1,
+    text2: colorOption1,
+    shadow: boxShadow,
   };
-``` -->
+
+  export const dark = {
+    background1: colorOption1,
+    background2: colorOption2,
+    text1: colorOption5,
+    text2: colorOption4,
+    shadow: '',
+  };
+```
+
+```
+  const { alphacode } = useParams();
+```
 
 <!-- LICENSE -->
 ## 7. License :memo:
@@ -224,7 +215,7 @@ Project Link: [https://darubiomunoz.github.io/portfolio-11-countries](https://da
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 * [Styled Components](https://styled-components.com/)
 * [React](https://reactjs.org/)
-* [React-React-App](https://create-react-app.dev/)
+* [Creact-React-App](https://create-react-app.dev/)
 * [React DOM](https://reactjs.org/docs/react-dom.html)
 * [React Scripts](https://create-react-app.dev/docs/available-scripts/)
 * [Redux](https://redux.js.org/)
@@ -244,5 +235,5 @@ Project Link: [https://darubiomunoz.github.io/portfolio-11-countries](https://da
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/darmdev/
 [product-screenshot]: ./src/assets/images/code.png/
-[product-screenshot-frontend]: ./src/assets/images/desktop_screenshot.png
-[product-screenshot-mobile]: ./src/assets/images/mobile_screenshot.png
+[product-screenshot-frontend]: ./src/assets/images/screenshot_desktop.png
+[product-screenshot-mobile]: ./src/assets/images/screenshot_mobile.png
