@@ -147,7 +147,7 @@ It was a very challenging project, now that I've finished the code I can say tha
 
 Also, when I was coding the redux logic I had to modify the state in an object with multiple levels and I struggle to find the correct way but as always, reading documentation helped find the correct way to do it using **Redux toolkit**, and I implemented the middleware, the **Redux Thunk**, to call the API I wasn't to difficult I just followed the documentation of **Redux**.
 
-Finally, I used many **hooks** and I created my own **custom hook** to format numbers called useFormatNumber.
+Finally, I used many **hooks** and I created two **customs hooks** one to format numbers called useFormatNumber and another to find the name of a country by its alpha 3 code called useFindName.
 
 These are some fractions of code where I struggled and came up with solutions.
 
@@ -169,6 +169,20 @@ These are some fractions of code where I struggled and came up with solutions.
 
     return formatNumber;
   };
+```
+```
+  import { useSelector } from 'react-redux';
+
+  export default function useFindName() {
+    const countries = useSelector(state => state.countries.dataSafeCopy);
+  
+    const findName = code => {
+      const country = countries.find(country => country.alpha3Code === code);
+      return country.name;
+    };
+
+    return findName;
+};
 ```
 
 ```
