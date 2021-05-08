@@ -23,13 +23,18 @@ const StyledBackButton = styled.button`
   font-size: ${fontSizeSmall};
   color: ${(props) => props.theme.text1};
   box-shadow: ${(props) => props.theme.shadow};
+  cursor: pointer;
 
   @media ${device.width411} {
     font-size: ${fontSizeRegular};
   }
 
   @media ${device.width1024} {
-    width: 22%;
+    width: ${(props) => (props.big ? "100%" : "22%")};
+  }
+
+  @media ${device.width1280} {
+    width: ${(props) => (props.big ? "100%" : "15%")};
   }
 `;
 

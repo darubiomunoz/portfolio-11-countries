@@ -8,6 +8,7 @@ const StyledCard = styled.div`
   border-radius: ${borderRadiusExtraSmall};
   background-color: ${props => props.theme.background1};
   box-shadow: ${props => props.theme.shadow};
+  cursor: pointer;
 
   @media ${device.width600} {
     width: 41%;

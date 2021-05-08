@@ -13,6 +13,10 @@ const StyledTitle = styled.h3`
   @media ${device.width411} {
     font-size: ${fontSizeMedium};
   }
+
+  @media ${device.width1280} {
+    width: 100%;
+  }
 `;
 
 export default StyledTitle;

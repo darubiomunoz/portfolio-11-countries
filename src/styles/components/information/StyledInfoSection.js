@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacingNormal } from '../../Variables';
+import { spacingNormal, device } from '../../Variables';
 
 const StyledInfoSection = styled.section`
   width: 100%;
@@ -8,6 +8,10 @@ const StyledInfoSection = styled.section`
   padding-bottom: ${spacingNormal};
   display: flex;
   justify-content: center;
+
+  @media ${device.width1280} {
+    padding-top: ${spacingNormal};
+  }
 `;
 
 export default StyledInfoSection;

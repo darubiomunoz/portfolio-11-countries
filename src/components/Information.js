@@ -32,7 +32,7 @@ const Information = () => {
         />
         <StyledArticle>
           <StyledTitle noMargin>{country.name}</StyledTitle>
-          <StyledInfoParagraph>
+          <StyledInfoParagraph half>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Native Name:</StyledDetailSpan>
               <StyledDetailSpan>{country.nativeName === '' ? 'No Data' : country.nativeName}</StyledDetailSpan>
@@ -54,7 +54,7 @@ const Information = () => {
               <StyledDetailSpan>{country.capital === '' ? 'No Data' : country.capital}</StyledDetailSpan>
             </StyledDetailsDiv>
           </StyledInfoParagraph>
-          <StyledInfoParagraph>
+          <StyledInfoParagraph half>
             <StyledDetailsDiv>
               <StyledDetailSpan bold>Top Level Domain:</StyledDetailSpan>
               <StyledDetailSpan>{country.topLevelDomain === '' ? 'No Data' : country.topLevelDomain}</StyledDetailSpan>

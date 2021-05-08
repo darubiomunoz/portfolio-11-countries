@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import StyledInfoArticle from '../countries/StyledInfoArticle';
 
-import { spacingRegular } from '../../Variables';
+import { spacingRegular, device } from '../../Variables';
 
 const StyledArticle = styled(StyledInfoArticle)`
   padding-left: 0;
@@ -10,9 +10,16 @@ const StyledArticle = styled(StyledInfoArticle)`
   display: flex;
   flex-direction: column;
   gap: ${spacingRegular};
-  background-color: ${props => props.theme.background2};
+  background-color: transparent;
   border-radius: 0;
   box-shadow: none;
+
+  @media ${device.width1280} {
+    width: 40%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 `;
 
 export default StyledArticle;
