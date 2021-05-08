@@ -17,7 +17,7 @@ const App = () => {
     <BrowserRouter>
       <ThemeProvider theme={theme === 'light' ? light : dark}>
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/portfolio-11-countries" component={HomePage} />
           <Route exact path="/country/:alphacode" component={Country} />
         </Switch>
         <GlobalStyle />
